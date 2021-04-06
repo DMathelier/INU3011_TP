@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE miroir SYSTEM "file:/Users/celinehostiou/Dropbox/Mon%20Mac%20(MacBook%20Air%20de%20C%C3%A9line)/Documents/DESS%20%C3%A9dition%20num%C3%A9rique%20UdeM/Hiver_2021/-%20INU3011_Documents_structur%C3%A9s/-%20%C3%89valuations/-%20TP3_Mod%C3%A9lisation_pr%C3%A9liminaire/Modele/miroir.dtd">
+<miroir ID="miroir12" photo="oui">
+    <suiviModif>
+        <creation date="2021-01-22">
+            <contributeur>Céline Hostiou</contributeur>
+        </creation>
+        <modification date="2021-01-23">
+            <contributeur>Daphné Mathelier</contributeur>
+        </modification>
+    </suiviModif>
+    <aspect couleur="or" forme="octogone">
+        <style epoque="vintage">Ce miroir dit "Makita", de la marque AMPM, est décoré de deux carrés en laiton superposés.</style>
+        <cadre>Le cadre en métal a fait l'objet d'une finition en laiton vieilli.</cadre>
+    </aspect>
+    <mesures>
+        <hauteur>70</hauteur>
+        <largeur>70</largeur>
+    </mesures>
+    <origine moyenAcquisition="achat" prixAchat="259">
+        <dateAcquisition>2020-03-31</dateAcquisition>
+        <commentaire>
+            <para>Ce miroir vintage, comme le <lienInterne ID="miroir22">miroir
+                22</lienInterne>, est proposé par les Galeries Lafayette. Sa fiche produit se trouve sous ce <lienExterne
+                    URL="https://www.galerieslafayette.com/p/miroir+metal+finition+vieillie+makita-ampm/300407151727/347"
+                    >lien</lienExterne>.</para>
+        </commentaire>
+    </origine>
+    <valeur>En mai 2020, le prix du miroir était de 259 euros.</valeur>
+    <usage>Ce miroir peut être indifféremment posé sur une commode, un meuble ou fixé au mur.</usage>
+</miroir>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE miroir SYSTEM "file:/Users/Daphne/ownCloud/4_DESS/Trimestre2/INU3011_Docs-structures/EVAL/TP3/Modele/miroir.dtd">
+<miroir ID="miroir45" photo="oui">
+    <suiviModif>
+        <creation date="2021-02-06">
+            <contributeur>Céline Hostiou</contributeur>
+        </creation>
+        <modification date="2021-03-09">
+            <contributeur>Daphné Mathelier</contributeur>
+        </modification>
+    </suiviModif>
+    <aspect couleur="vert" forme="ovale">
+        <style epoque="XXe siècle">Ce miroir moderne et coloré est créé et signé par l'artiste américain
+            David Marshall. Conçu dans les années 1990, il est fait entièrement de verre sculpté. Un
+            héron vert d'eau orne son pourtour. </style>
+    </aspect>
+    <mesures>
+        <hauteur>99</hauteur>
+        <largeur>71</largeur>
+    </mesures>
+    <origine moyenAcquisition="achat" prixAchat="XX€">
+        <dateAcquisition>2019-09-17</dateAcquisition>
+    </origine>
+</miroir>

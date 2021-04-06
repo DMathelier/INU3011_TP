@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE miroir SYSTEM "file:/Users/Daphne/ownCloud/4_DESS/Trimestre2/INU3011_Docs-structures/EVAL/TP3/Modele/miroir.dtd">
+<miroir ID="miroir50" photo="oui">
+    <suiviModif>
+        <creation date="2021-02-12">
+            <contributeur>Daphné Mathelier</contributeur>
+        </creation>
+        <modification date="2021-03-09">
+            <contributeur>Céline Hostiou</contributeur>
+        </modification>
+    </suiviModif>
+    <aspect couleur="or" forme="rond">
+        <style epoque="contemporain">Ce miroir est composé d'une structure à double cercles en métal
+            doré, d'un verre miroir à biseaux et comporte un dessin d'étoile.</style>
+        <cadre>Le miroir est entouré d'un cadre doré très fin.</cadre>
+    </aspect>
+    <mesures>
+        <hauteur>120</hauteur>
+        <largeur>120</largeur>
+        <profondeur>4</profondeur>
+        <poids>10</poids>
+    </mesures>
+    <origine moyenAcquisition="achat" prixAchat="1196,90 €">
+        <dateAcquisition>2021-02-10</dateAcquisition>
+        <commentaire>
+            <para>Ce miroir fait partie de la collection 2021 de l'enseigne Maisons du monde. Il
+                permet selon le vendeur de donner un <em>coup d'éclat</em> à son intérieur (voir la
+                description complète sur le <lienExterne
+                    URL="http://www.maisonsdumonde.com/FR/fr/p/miroir-rond-or-etoile-d120-M20020841.htm"
+                    >site</lienExterne> de Maisons du monde).</para>
+            <para>Dans le même style, voir le <lienInterne ID="miroir22">miroir 22</lienInterne> de la collection.</para>
+        </commentaire>
+    </origine>
+    <valeur>En mars 2020 le prix du miroir était à 1196,90 €</valeur>
+    <usage>Ce miroir à fixer peut trouver sa place dans toutes les pièces de la maison.</usage>
+</miroir>

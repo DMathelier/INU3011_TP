@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE miroir SYSTEM "file:/Users/celinehostiou/Dropbox/Mon%20Mac%20(MacBook%20Air%20de%20C%C3%A9line)/Documents/DESS%20%C3%A9dition%20num%C3%A9rique%20UdeM/Hiver_2021/-%20INU3011_Documents_structur%C3%A9s/-%20%C3%89valuations/-%20TP3_Mod%C3%A9lisation_pr%C3%A9liminaire/Modele/miroir.dtd">
+<miroir ID="miroir9" photo="oui">
+    <suiviModif>
+        <creation date="2021-01-15">
+            <contributeur>Céline Hostiou</contributeur>
+        </creation>
+        <modification date="2021-01-16">
+            <contributeur>Daphné Mathelier</contributeur>
+        </modification>
+    </suiviModif>
+    <aspect couleur="transparent" forme="rond">
+        <style epoque="vintage">Ce miroir circulaire est agrémenté de trois rangées de perles de verre scintillantes.</style>
+        <cadre>Des bijoux ornent le pourtour.</cadre>
+    </aspect>
+    <mesures>
+        <hauteur>30</hauteur>
+        <largeur>30</largeur>
+        <profondeur>4,45</profondeur>
+        <poids>6,35</poids>
+    </mesures>
+    <origine moyenAcquisition="don" prixAchat="99">
+        <dateAcquisition>2020-03-31</dateAcquisition>
+        <commentaire>
+            <para>Ce miroir vintage, comme le <lienInterne ID="miroir17">miroir
+                17</lienInterne>, a été conçu par The Tangerine Mirror Company. Sa fiche produit se trouve sous ce <lienExterne
+                    URL="https://www.homedepot.ca/produit/the-tangerine-mirror-company-bijou-miroir-rond/1001384871"
+                    >lien</lienExterne>.</para>
+        </commentaire>
+    </origine>
+    <valeur>En mai 2020, le prix du miroir était de 99 dollars.</valeur>
+    <usage>Mieux vaut fixer ce miroir dans une pièce très claire afin de rehausser l'éclat des perles de verre qui y sont serties.</usage>
+</miroir>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Modèle XML développé dans le cadre du cours INU3011 Documents structurés -->
+<!-- EBSI - Université de Montréal -->
+
+<!-- Équipe: Céline Hostiou (20096330), Daphné Mathelier (20177495). -->
+<!-- Élément de plus haut niveau: miroir -->
+
+<!--
+Les commentaires commençant par "doc:" sont utilisés par oXygen comme documentation d’aide à la
+saisie. Ils sont affichés en infobulles pendant l’édition de documents conformes à la DTD lorsque le
+curseur survole un nom d’élément ou d’attribut.
+-->
+
+<!-- doc: Description d'un miroir -->
+<!ELEMENT miroir (suiviModif, aspect, mesures, origine, valeur?, usage?) >
+
+<!-- doc: Identifiant de la fiche qui correspond au numéro attribué au miroir (déterminé par la date d'acquisition) Exemples:
+  miroir1
+  miroir22 -->
+<!ATTLIST miroir ID NMTOKEN #REQUIRED>
+
+<!-- doc: Éventuelle photo du miroir (accessible via un lien vers le dossier "photos"), au format JPEG et dont l'intitulé est similaire à l'identifiant du miroir (ex. "miroir1.jpg"). -->
+<!ATTLIST miroir photo (oui | non) #REQUIRED>
+
+<!-- doc: Suivi des modifications apportées à la présente fiche -->
+<!ELEMENT suiviModif (creation, modification)>
+
+<!-- doc: Information sur la création de la fiche -->
+<!ELEMENT creation (contributeur)>
+
+<!-- doc: Date de création de la fiche au format AAA-MM-JJ Exemples:
+  2021-03-08
+  1989-10-09 -->
+<!ATTLIST creation date NMTOKEN #REQUIRED>
+
+<!-- doc: Informations sur la dernière modification de la fiche -->
+<!ELEMENT modification (contributeur)>
+
+<!-- doc: Date de dernière modification de la fiche au format AAA-MM-JJ Exemples:
+  2021-03-08
+  1989-10-09 -->
+<!ATTLIST modification date NMTOKEN #REQUIRED>
+
+<!-- doc: Personne ayant créé ou modifié la fiche au format "Prénom Nom" Exemples:
+  Daphné Mathelier
+  Céline Hostiou -->
+<!ELEMENT contributeur (#PCDATA)>
+
+<!-- doc: Aspect du miroir -->
+<!ELEMENT aspect (style, cadre?)>
+
+<!-- doc: Couleur principale du miroir -->
+<!ATTLIST aspect couleur (argent | beige | blanc | bleu | brun | cuivre | gris | jaune | multicolore | noir | or | orange | rose | rouge | transparent | vert | violet) #REQUIRED>
+
+<!-- doc: Forme du miroir -->
+<!ATTLIST aspect forme (arabesque | carré | hexagone  | irrégulier  | octogone | ovale | rectangle | rond | triangle) #REQUIRED>
+
+<!-- doc: Style du miroir Exemples:
+  Industriel
+  Joli miroir <em>vintage</em> -->
+<!ELEMENT style (#PCDATA | para | em | lienInterne | lienExterne)*>
+
+<!-- doc: Époque du miroir Exemples:
+  Contemporain
+  XVIIIe siècle -->
+<!ATTLIST style epoque CDATA #REQUIRED>
+
+<!-- doc: Description du cadre Exemples:
+  Cadre en métal d'une épaisseur de 5 cm
+  Discret cadre en faux bois -->
+<!ELEMENT cadre (#PCDATA | para | em | lienInterne | lienExterne)*>
+
+<!-- doc: Mesures du miroir -->
+<!ELEMENT mesures (hauteur, largeur, profondeur?, poids?)>
+
+<!-- doc: Hauteur du miroir en cm Exemples:
+  200
+  50 -->
+<!ELEMENT hauteur (#PCDATA)>
+
+<!-- doc: Largeur du miroir en cm Exemples:
+  90
+  150,5 -->
+<!ELEMENT largeur (#PCDATA)>
+
+<!-- doc: Profondeur du miroir en cm Exemples:
+  5
+  0,25 -->
+<!ELEMENT profondeur (#PCDATA)>
+
+<!-- doc: Poids du miroir en kg Exemples:
+  52,9
+  0,25 -->
+<!ELEMENT poids (#PCDATA)>
+
+<!-- doc: Origine du miroir -->
+<!ELEMENT origine (dateAcquisition, commentaire?)>
+
+<!-- doc: Contexte d'acquisition du miroir -->
+<!ATTLIST origine moyenAcquisition (achat | don | indéterminé) #REQUIRED>
+
+<!-- doc: Prix d'achat du miroir en euros Exemples:
+  50 €
+  499 € -->
+<!ATTLIST origine prixAchat CDATA #IMPLIED>
+
+<!-- doc: Date d'acquisition du miroir au format AAAA-MM-JJ Exemples:
+  2021-03-08
+  1989-10-09 -->
+<!ELEMENT dateAcquisition (#PCDATA)>
+
+<!-- doc: Informations supplémentaires sur le miroir (par exemple sur son créateur ou sur le mouvement artistique dont il est issu) Exemples:
+  Miroir très rare de fabrication italienne dont on ne trouve plus que dix exemplaires dans le monde
+  <para> Ce miroir a été commercialisé en 2020 par l'enseigne <lienExterne URL="http://www.maisonsdumonde.com">Maison du monde</lienExterne></para> -->
+<!ELEMENT commentaire (#PCDATA | para)*>
+
+<!-- doc: Valeur estimée du miroir Exemples:
+  100 €
+  En février 2021, le prix du miroir était estimé à 715 € -->
+<!ELEMENT valeur (#PCDATA)>
+
+<!-- doc: Usage attendu du miroir Exemples:
+  Ce miroir de poche est très léger et peut se glisser facilement dans une valise
+  Grand miroir d'entrée permettant de visualiser un corps en entier -->
+<!ELEMENT usage (#PCDATA | para | em | lienInterne | lienExterne)*>
+
+<!-- doc: Bloc de paragraphe pouvant contenir des sous-éléments en emphase et des liens (internes ou externes). Exemples:
+  Un miroir très <em>british</em> !
+  Dans le même style, voir également <lien ID="miroir22">ce miroir</lien>. -->
+<!ELEMENT para (#PCDATA | em | lienInterne | lienExterne)*>
+
+<!-- doc: Passage en emphase. Exemples:
+  style <em>british</em> et romantique
+  miroir <em>so chic</em> -->
+<!ELEMENT em (#PCDATA)>
+
+<!-- doc: Lien pour renvoyer à un autre miroir de la collection dans un paragraphe de texte via son identifiant (attribut ID) Exemples:
+  dans un style totalement opposé au <lienInterne ID="miroir1">numéro 1</lienInterne de la collection
+  dans le même style, voir <lienInterne ID="miroir22">ce miroir</lienInterne -->
+<!ELEMENT lienInterne (#PCDATA)>
+
+<!-- doc: Identifiant du miroir auquel le lien renvoie. Exemples:
+  miroir1
+  miroir22 -->
+<!ATTLIST lienInterne ID NMTOKEN #REQUIRED>
+
+<!-- doc: Lien pour renvoyer à une ressource externe via une URL Exemples:
+  voir les autres miroirs proposés par <lienExterne URL="http://www.bouclair.com/fr/decor-mural/miroirs/">Bouclair</lienExterne>
+  ce miroir a été acheté sur <lienExterne URL="http://www.proantic.com/miroir.php">Proantic.com</lienExterne>, réseau d'antiquaires professionnels  -->
+<!ELEMENT lienExterne (#PCDATA)>
+
+<!-- doc: Ressource externe à laquelle le lien renvoie. Exemples:
+  http://www.bouclair.com/fr/decor-mural/miroirs/
+  http://www.proantic.com/miroir.php -->
+<!ATTLIST lienExterne URL CDATA #REQUIRED>

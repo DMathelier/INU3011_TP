@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE modèleXML3011 SYSTEM "https://cours.ebsi.umontreal.ca/INU3011/modeleXML3011-lite/modeleXML3011.dtd">
+<?xml-stylesheet type="text/css" href="https://cours.ebsi.umontreal.ca/INU3011/modeleXML3011-lite/modeleXML3011.css"?>
+<modèleXML3011 xml:lang="fr">
+    <équipe>
+        <membre>
+            <prénom>Céline</prénom>
+            <nomFamille>Hostiou</nomFamille>
+            <matriculeUdeM>20096330</matriculeUdeM>
+        </membre>
+        <membre>
+            <prénom>Daphné</prénom>
+            <nomFamille>Mathelier</nomFamille>
+            <matriculeUdeM>20177495</matriculeUdeM>
+        </membre>
+    </équipe>
+    <contexteDuModèle>Ce modèle a été conçu pour faciliter la gestion d'une collection grandissante de miroirs (50 en mars 2021) qui a commencé en 2017 suite à un héritage perçu par le collectionneur. Amateur d'art et d'informatique, ce dernier a mis en place début 2021 avec l'aide d'un ami le présent modèle de classement qui pourra être amené à évoluer en fonction des miroirs collectés, des besoins ressentis et des projets envisagés.</contexteDuModèle>
+    <EPHN>miroir</EPHN>
+    <éléments>
+        <élément>
+            <idGen>miroir</idGen>
+            <descriptionPourInfobulle>Description d'un miroir</descriptionPourInfobulle>
+            <modèleContenuXML>(suiviModif, aspect, mesures, origine, valeur?, usage?) </modèleContenuXML>
+            <attributs>
+                <attribut>
+                    <nom>ID</nom>
+                    <descriptionPourInfobulle>Identifiant de la fiche qui correspond au numéro attribué au miroir (déterminé par la date d'acquisition)</descriptionPourInfobulle>
+                    <NMTOKEN/>
+                    <REQUIRED/>
+                    <exemplesValeurAttendue>
+                        <exemple>miroir1</exemple>
+                        <exemple>miroir22</exemple>
+                    </exemplesValeurAttendue>
+                    <commentairesDeModélisation>L'identifiant attribué à chaque miroir permet de nommer à la fois la fiche XML et l'image associée (s'il y en a une)</commentairesDeModélisation>
+                </attribut>
+            <attribut>
+                <nom>photo</nom>
+                <descriptionPourInfobulle>Éventuelle photo du miroir (accessible via un lien vers le dossier "photos"), au format JPEG et dont l'intitulé est similaire à l'identifiant du miroir (ex. "miroir1.jpg").</descriptionPourInfobulle>
+                <énuméré>
+                    <valeurPossible>oui</valeurPossible>
+                    <valeurPossible>non</valeurPossible>
+                </énuméré>
+                <REQUIRED/>
+            </attribut>
+            </attributs>
+        </élément>
+        <élément>
+            <idGen>suiviModif</idGen>
+            <descriptionPourInfobulle>Suivi des modifications apportées à la présente fiche</descriptionPourInfobulle>
+            <modèleContenuXML>(creation, modification)</modèleContenuXML>
+        </élément>    
+        <élément>
+            <idGen>creation</idGen>
+            <descriptionPourInfobulle>Information sur la création de la fiche</descriptionPourInfobulle>
+            <modèleContenuXML>(contributeur)</modèleContenuXML>
+            <attributs>
+                <attribut>
+                    <nom>date</nom>
+                    <descriptionPourInfobulle>Date de création de la fiche au format AAA-MM-JJ</descriptionPourInfobulle>
+                    <NMTOKEN/>
+                    <REQUIRED/>
+                    <exemplesValeurAttendue>
+                        <exemple>2021-03-08</exemple>
+                        <exemple>1989-10-09</exemple>
+                    </exemplesValeurAttendue>
+                </attribut>
+            </attributs>
+        </élément>
+        <élément>
+            <idGen>modification</idGen>
+            <descriptionPourInfobulle>Informations sur la dernière modification de la fiche</descriptionPourInfobulle>
+            <modèleContenuXML>(contributeur)</modèleContenuXML>
+            <attributs>
+                <attribut>
+                    <nom>date</nom>
+                    <descriptionPourInfobulle>Date de dernière modification de la fiche au format AAA-MM-JJ</descriptionPourInfobulle>
+                    <NMTOKEN/>
+                    <REQUIRED/>
+                    <exemplesValeurAttendue>
+                        <exemple>2021-03-08</exemple>
+                        <exemple>1989-10-09</exemple>
+                    </exemplesValeurAttendue>
+                </attribut>
+            </attributs>
+        </élément>
+        <élément>
+            <idGen>contributeur</idGen>
+            <descriptionPourInfobulle>Personne ayant créé ou modifié la fiche au format "Prénom Nom"</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>Daphné Mathelier</exemple>
+                <exemple>Céline Hostiou</exemple>
+            </exemplesContenuAttendu>
+            <commentairesDeModélisation>Un seul contributeur par élément</commentairesDeModélisation>
+        </élément>
+        <élément>
+            <idGen>aspect</idGen>
+            <descriptionPourInfobulle>Aspect du miroir</descriptionPourInfobulle>
+            <modèleContenuXML>(style, cadre?)</modèleContenuXML>
+            <commentairesDeModélisation>Il est obligatoire de renseigner la forme et la couleur du miroir selon des listes prédéfinies, ainsi que son style (au minimum son époque). D'autres renseignements sont facultatifs comme la présence d'un cadre ou l'orientation du miroir</commentairesDeModélisation>
+            <attributs>
+                <attribut>
+                    <nom>forme</nom>
+                    <descriptionPourInfobulle>Forme du miroir</descriptionPourInfobulle>
+                    <énuméré>
+                        <valeurPossible>arabesque</valeurPossible>
+                        <valeurPossible>carré</valeurPossible>
+                        <valeurPossible>hexagone </valeurPossible>
+                        <valeurPossible>irrégulier </valeurPossible>
+                        <valeurPossible>octogone</valeurPossible>
+                        <valeurPossible>ovale</valeurPossible>
+                        <valeurPossible>rectangle</valeurPossible>
+                        <valeurPossible>rond</valeurPossible>
+                        <valeurPossible>triangle</valeurPossible>
+                    </énuméré>
+                    <REQUIRED/>
+                    <commentairesDeModélisation>Le modélisateur doit choisir une forme dans une liste prédéfinie</commentairesDeModélisation>
+                </attribut>
+                <attribut>
+                    <nom>couleur</nom>
+                    <descriptionPourInfobulle>Couleur principale du miroir</descriptionPourInfobulle>
+                    <énuméré>
+                        <valeurPossible>argent</valeurPossible>
+                        <valeurPossible>beige</valeurPossible>
+                        <valeurPossible>blanc</valeurPossible>
+                        <valeurPossible>bleu</valeurPossible>
+                        <valeurPossible>brun</valeurPossible>
+                        <valeurPossible>cuivre</valeurPossible>
+                        <valeurPossible>gris</valeurPossible>
+                        <valeurPossible>jaune</valeurPossible>
+                        <valeurPossible>multicolore</valeurPossible>
+                        <valeurPossible>noir</valeurPossible>
+                        <valeurPossible>or</valeurPossible>
+                        <valeurPossible>orange</valeurPossible>
+                        <valeurPossible>rose</valeurPossible>
+                        <valeurPossible>rouge</valeurPossible>
+                        <valeurPossible>transparent</valeurPossible>
+                        <valeurPossible>vert</valeurPossible>
+                        <valeurPossible>violet</valeurPossible>
+                    </énuméré>
+                    <REQUIRED/>
+                    <commentairesDeModélisation>Le modélisateur doit choisir une couleur dans une liste prédéfinie</commentairesDeModélisation>
+                </attribut>
+            </attributs>
+        </élément>
+        <élément>
+            <idGen>style</idGen>
+            <descriptionPourInfobulle>Style du miroir</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA | para | em | lienInterne | lienExterne)*</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>Industriel</exemple>
+                <exemple>Joli miroir &lt;em>vintage&lt;/em></exemple>
+            </exemplesContenuAttendu>
+            <commentairesDeModélisation>Précisions sur le style si celui-ci est très marqué. L'emphase et les liens internes et externes sont autorisés. Il est possible d'organiser le propos en plusieurs paragraphes</commentairesDeModélisation>
+            <attributs>
+                <attribut>
+                    <nom>epoque</nom>
+                    <descriptionPourInfobulle>Époque du miroir</descriptionPourInfobulle>
+                    <CDATA/>
+                    <REQUIRED/>
+                    <exemplesValeurAttendue>
+                        <exemple>Contemporain</exemple>
+                        <exemple>XVIIIe siècle</exemple>
+                    </exemplesValeurAttendue>
+                    <commentairesDeModélisation>Préciser au minimum l'époque du miroir</commentairesDeModélisation>
+                </attribut>
+            </attributs>
+        </élément>
+        <élément>
+            <idGen>cadre</idGen>
+            <descriptionPourInfobulle>Description du cadre</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA | para | em | lienInterne | lienExterne)*</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>Cadre en métal d'une épaisseur de 5 cm</exemple>
+                <exemple>Discret cadre en faux bois</exemple>
+            </exemplesContenuAttendu>
+            <commentairesDeModélisation>À ne remplir que s'il y a un cadre</commentairesDeModélisation>
+        </élément>
+        <élément>
+            <idGen>mesures</idGen>
+            <descriptionPourInfobulle>Mesures du miroir</descriptionPourInfobulle>
+            <modèleContenuXML>(hauteur, largeur, profondeur?, poids?)</modèleContenuXML>
+            <commentairesDeModélisation>Il est obligatoire de mentionner au minimum la hauteur et la largeur du miroir</commentairesDeModélisation>
+        </élément>
+        <élément>
+            <idGen>hauteur</idGen>
+            <descriptionPourInfobulle>Hauteur du miroir en cm</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>200</exemple>
+                <exemple>50</exemple>
+            </exemplesContenuAttendu>
+        </élément>
+        <élément>
+            <idGen>largeur</idGen>
+            <descriptionPourInfobulle>Largeur du miroir en cm</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>90</exemple>
+                <exemple>150,5</exemple>
+            </exemplesContenuAttendu>
+        </élément>
+        <élément>
+            <idGen>profondeur</idGen>
+            <descriptionPourInfobulle>Profondeur du miroir en cm</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>5</exemple>
+                <exemple>0,25</exemple>
+            </exemplesContenuAttendu>
+            <commentairesDeModélisation>À compléter si nécessaire</commentairesDeModélisation>
+        </élément>
+        <élément>
+            <idGen>poids</idGen>
+            <descriptionPourInfobulle>Poids du miroir en kg</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>52,9</exemple>
+                <exemple>0,25</exemple>
+            </exemplesContenuAttendu>
+            <commentairesDeModélisation>À compléter si nécessaire</commentairesDeModélisation>
+        </élément>
+        <élément>
+            <idGen>origine</idGen>
+            <descriptionPourInfobulle>Origine du miroir</descriptionPourInfobulle>
+            <modèleContenuXML>(dateAcquisition, commentaire?)</modèleContenuXML>
+            <commentairesDeModélisation>Il est obligatoire de préciser comment le collectionneur a obtenu le miroir. En fonction de cette réponse, d'autres informations pourront être renseignées comme le prix d'achat</commentairesDeModélisation>
+        <attributs>
+            <attribut>
+                <nom>moyenAcquisition</nom>
+                <descriptionPourInfobulle>Contexte d'acquisition du miroir</descriptionPourInfobulle>
+                <énuméré>
+                    <valeurPossible>achat</valeurPossible>
+                    <valeurPossible>don</valeurPossible>
+                    <valeurPossible>indéterminé</valeurPossible>
+                </énuméré>
+                <REQUIRED/>
+                <commentairesDeModélisation>Seulement trois possibilités</commentairesDeModélisation>
+            </attribut>
+            <attribut>
+                <nom>prixAchat</nom>
+                <descriptionPourInfobulle>Prix d'achat du miroir en euros</descriptionPourInfobulle>
+                <CDATA/>
+                <IMPLIED/>
+                <exemplesValeurAttendue>
+                    <exemple>50 €</exemple>
+                    <exemple>499 €</exemple>
+                </exemplesValeurAttendue>
+                <commentairesDeModélisation>À compléter si le miroir a été acheté et que cette information est connue. CDATA car le prix en euros peut comprendre des virgules </commentairesDeModélisation>
+            </attribut>
+        </attributs>
+        </élément>
+        <élément>
+            <idGen>dateAcquisition</idGen>
+            <descriptionPourInfobulle>Date d'acquisition du miroir au format AAAA-MM-JJ</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>2021-03-08</exemple>
+                <exemple>1989-10-09</exemple>
+            </exemplesContenuAttendu>
+            <commentairesDeModélisation>Information obligatoire permettant d'attribuer les identifiants des miroirs (numérotation chronologique)</commentairesDeModélisation>
+        </élément>
+        <élément>
+            <idGen>commentaire</idGen>
+            <descriptionPourInfobulle>Informations supplémentaires sur le miroir (par exemple sur son créateur ou sur le mouvement artistique dont il est issu)</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA | para)*</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>Miroir très rare de fabrication italienne dont on ne trouve plus que dix exemplaires dans le monde</exemple>
+                <exemple>&lt;para> Ce miroir a été commercialisé en 2020 par l'enseigne &lt;lienExterne URL="http://www.maisonsdumonde.com">Maison du monde&lt;/lienExterne>&lt;/para></exemple>
+            </exemplesContenuAttendu>
+            <commentairesDeModélisation>Texte libre qui peut comprendre plusieurs paragraphes, de l'emphase et des liens, en fonction de la quantité d'informations que souhaite ajouter le collectionneur</commentairesDeModélisation>
+        </élément>
+        <élément>
+            <idGen>valeur</idGen>
+            <descriptionPourInfobulle>Valeur estimée du miroir</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>100 €</exemple>
+                <exemple>En février 2021, le prix du miroir était estimé à 715 €</exemple>
+            </exemplesContenuAttendu>
+            <commentairesDeModélisation>Information facultative car difficile à estimer</commentairesDeModélisation>
+        </élément>
+        <élément>
+            <idGen>usage</idGen>
+            <descriptionPourInfobulle>Usage attendu du miroir</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA | para | em | lienInterne | lienExterne)*</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>Ce miroir de poche est très léger et peut se glisser facilement dans une valise</exemple>
+                <exemple>Grand miroir d'entrée permettant de visualiser un corps en entier</exemple>
+            </exemplesContenuAttendu>
+            <commentairesDeModélisation>Texte libre qui peut comprendre plusieurs paragraphes, de l'emphase et des liens, en fonction de la quantité d'informations que souhaite ajouter le collectionneur</commentairesDeModélisation>
+        </élément>
+        <élément>
+            <idGen>para</idGen>
+            <descriptionPourInfobulle>Bloc de paragraphe pouvant contenir des sous-éléments en emphase et des liens (internes ou externes).</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA | em | lienInterne | lienExterne)*</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>Un miroir très &lt;em>british&lt;/em> !</exemple>
+                <exemple>Dans le même style, voir également &lt;lien ID="miroir22">ce miroir&lt;/lien>.</exemple>
+            </exemplesContenuAttendu>
+        </élément>
+        <élément>
+            <idGen>em</idGen>
+            <descriptionPourInfobulle>Passage en emphase.</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>style &lt;em>british&lt;/em> et romantique</exemple>
+                <exemple>miroir &lt;em>so chic&lt;/em></exemple>
+            </exemplesContenuAttendu>
+        </élément>
+        <élément>
+            <idGen>lienInterne</idGen>
+            <descriptionPourInfobulle>Lien pour renvoyer à un autre miroir de la collection dans un paragraphe de texte via son identifiant (attribut ID)</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>dans un style totalement opposé au &lt;lienInterne ID="miroir1">numéro 1&lt;/lienInterne de la collection</exemple>
+                <exemple>dans le même style, voir &lt;lienInterne ID="miroir22">ce miroir&lt;/lienInterne</exemple>
+            </exemplesContenuAttendu>
+            <attributs>
+                <attribut>
+                    <nom>ID</nom>
+                    <descriptionPourInfobulle>Identifiant du miroir auquel le lien renvoie.</descriptionPourInfobulle>
+                    <NMTOKEN/>
+                    <REQUIRED/>
+                    <exemplesValeurAttendue>
+                        <exemple>miroir1</exemple>
+                        <exemple>miroir22</exemple>
+                    </exemplesValeurAttendue>
+                </attribut>
+            </attributs>
+        </élément>
+        <élément>
+            <idGen>lienExterne</idGen>
+            <descriptionPourInfobulle>Lien pour renvoyer à une ressource externe via une URL</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>voir les autres miroirs proposés par &lt;lienExterne URL="http://www.bouclair.com/fr/decor-mural/miroirs/">Bouclair&lt;/lienExterne></exemple>
+                <exemple>ce miroir a été acheté sur &lt;lienExterne URL="http://www.proantic.com/miroir.php">Proantic.com&lt;/lienExterne>, réseau d'antiquaires professionnels </exemple>
+            </exemplesContenuAttendu>
+            <attributs>
+                <attribut>
+                    <nom>URL</nom>
+                    <descriptionPourInfobulle>Ressource externe à laquelle le lien renvoie.</descriptionPourInfobulle>
+                    <CDATA/>
+                    <REQUIRED/>
+                    <exemplesValeurAttendue>
+                        <exemple>http://www.bouclair.com/fr/decor-mural/miroirs/</exemple>
+                        <exemple>http://www.proantic.com/miroir.php</exemple>
+                    </exemplesValeurAttendue>
+                </attribut>
+            </attributs>
+        </élément>
+    </éléments>
+</modèleXML3011>

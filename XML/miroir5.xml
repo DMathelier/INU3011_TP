@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE miroir SYSTEM "file:/Users/celinehostiou/Dropbox/Mon%20Mac%20(MacBook%20Air%20de%20C%C3%A9line)/Documents/DESS%20%C3%A9dition%20num%C3%A9rique%20UdeM/Hiver_2021/-%20INU3011_Documents_structur%C3%A9s/-%20%C3%89valuations/-%20TP3_Mod%C3%A9lisation_pr%C3%A9liminaire/Modele/miroir.dtd">
+<miroir ID="miroir5" photo="non">
+    <suiviModif>
+        <creation date="2021-02-06">
+            <contributeur>Céline Hostiou</contributeur>
+        </creation>
+        <modification date="2021-03-09">
+            <contributeur>Daphné Mathelier</contributeur>
+        </modification>
+    </suiviModif>
+    <aspect couleur="transparent" forme="octogone">
+        <style epoque="XXe siècle">Ce miroir octogonal comporte dans sa partie inférieure un vase
+            capable de contenir des fleurs artificielles. Des fragments de miroir en bandes
+            verticales se trouvent sur ses parties latérales et donnent un effet d'éclatement de la
+            perspective.</style>
+    </aspect>
+    <mesures>
+        <hauteur>24</hauteur>
+        <largeur>24</largeur>
+    </mesures>
+    <origine moyenAcquisition="don">
+        <dateAcquisition>2017-02-13</dateAcquisition>
+    </origine>
+</miroir>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE miroir SYSTEM "file:/Users/Daphne/ownCloud/4_DESS/Trimestre2/INU3011_Docs-structures/EVAL/TP3/Modele/miroir.dtd">
+<miroir ID="miroir42" photo="oui">
+    <suiviModif>
+        <creation date="2021-02-24">
+            <contributeur>Daphné Mathelier</contributeur>
+        </creation>
+        <modification date="2021-03-09">
+            <contributeur>Céline Hostiou</contributeur>
+        </modification>
+    </suiviModif>
+    <aspect couleur="blanc" forme="rectangle">
+        <style epoque="XIXe siècle">Ce miroir rectangulaire comporte un trumeau imitant les
+            pratiques de décoration qui ont eu cours à partir du règne de Louis XVI et se sont
+            poursuivies au XIXe siècle. La pièce imitant le bois sculpté est soulignée d'une
+            ornementation florale en cuivre.</style>
+        <cadre>Le miroir est entouré d'un cadre en résine fabriqué à la commande dans un atelier
+            d'artisan en France.</cadre>
+    </aspect>
+    <mesures>
+        <hauteur>176</hauteur>
+        <largeur>97</largeur>
+    </mesures>
+    <origine moyenAcquisition="achat" prixAchat="715 €">
+        <dateAcquisition>2019-07-20</dateAcquisition>
+        <commentaire>
+            <para>Ce miroir a été acquis initialement par le collectionneur dans un magasin de la
+                chaîne française <lienExterne URL="http://www.maisonsdumonde.com/">Maisons du
+                    monde</lienExterne>. La description du miroir est consultable <lienExterne
+                    URL="http://www.maisonsdumonde.com/FR/fr/p/miroir-trumeau-en-resine-ivoire-70x150-M21017760.htm"
+                    >sous ce lien</lienExterne>.</para>
+            <para>En ceci qu'il est rectangulaire et orné, il ressemble au <lienInterne
+                    ID="miroir29">miroir 29</lienInterne> de la collection.</para>
+        </commentaire>
+    </origine>
+    <valeur>En février 2021, le prix du miroir était estimé à 715 €</valeur>
+    <usage>Ce miroir à fixer convient particulièrement à un salon, ou bien à une chambre, une entrée
+        pour la vérification de l'habillement de pied en cap. Selon le vendeur, il est <em>idéal pour un salon ou même un dressing</em>
+    </usage>
+</miroir>

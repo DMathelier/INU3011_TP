@@ -1,0 +1,38 @@
+% Ce fichier doit être en UTF-8 sans BOM (TeXworks ne tolère pas le BOM)
+% Après ce préambule, les seuls caractères qui ne doivent pas être dans
+% le texte du document sont: "\", "{", "}"
+\documentclass[12pt]{article}
+\usepackage[letterpaper,margin=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[normalem]{ulem}
+\usepackage{textcomp}
+\usepackage[french]{babel}
+\selectlanguage{french}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth#1{\ifdim\Gin@nat@width>#1 #1\else\Gin@nat@width\fi}
+\makeatother
+\newcommand{\image}[1]{\includegraphics[width=\maxwidth{\textwidth}]{#1}}
+%\newcommand{\scr}{\fontfamily{pzc}\selectfont}
+%\newcommand{\ital}{\sf\em}
+\catcode`\&=\active
+\def&{\&}
+%\catcode160=\active
+%\def {~}
+\catcode`_=11		% lettre
+%\def_{\_}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0.8\baselineskip}
+\newcommand{\hr}{\rule{\textwidth}{0.4pt}}
+\begin{document}
+\renewcommand{\labelitemi}{$\bullet$}	% Doit être après le \begin{document}
+\renewcommand{\labelitemii}{$\circ$}	% Doit être après le \begin{document}
+\renewcommand{\labelitemiii}{-}	% Doit être après le \begin{document}
+\catcode`$=\active		% Doit être après les $\bullet$ etc.
+\def${\$}
+\catcode`#=\active
+\def#{\#}
+% Ce qui suit doit être après le \begin{document}, sinon erreur ésotérique.
+\catcode`\%=\active
+\def%{\%}

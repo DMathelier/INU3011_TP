@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<project name="INU3011-LaTeX2PDF" default="LaTeX2PDF">
+	<target name="LaTeX2PDF" description="Génération des PDF à partir des LaTeX">
+		<echo>Génération des PDF à partir des LaTeX</echo>
+		<mkdir dir="../PDF" />
+		<apply executable="pdflatex">
+			<arg value="-halt-on-error" />
+			<arg value="-output-directory=../PDF" />
+			<fileset dir="../LaTeX" casesensitive="no">
+				<include name="*.tex" />
+<!--		  <exclude name="preamb3011.tex"/> -->
+			</fileset>
+		</apply>
+	</target>
+</project>
