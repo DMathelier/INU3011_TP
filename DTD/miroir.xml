@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE modèleXML3011 SYSTEM "https://cours.ebsi.umontreal.ca/INU3011/modeleXML3011-lite/modeleXML3011.dtd">
 <?xml-stylesheet type="text/css" href="https://cours.ebsi.umontreal.ca/INU3011/modeleXML3011-lite/modeleXML3011.css"?>
+
 <modèleXML3011 xml:lang="fr">
     <équipe>
         <membre>
