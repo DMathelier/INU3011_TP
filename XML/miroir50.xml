@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE miroir SYSTEM "file:/Users/Daphne/Documents/GitHub/INU3011_TP/DTD/miroir.dtd">
+<?xml-stylesheet type="text/xsl" href="file:/Users/Daphne/Documents/GitHub/INU3011_TP/XSLT/HTML.xsl"?>
+
 <miroir ID="miroir50" photo="oui">
     <suiviModif>
         <création date="2021-03-22">

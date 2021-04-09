@@ -80,7 +80,10 @@ conception de votre transformation.
   <xsl:template match="mesures">
     <p>
       <strong>Mesures</strong>
+      <xsl:apply-templates select="hauteur"/>
       <xsl:apply-templates select="largeur"/>
+      <xsl:apply-templates select="profondeur"/>
+      <xsl:apply-templates select="poids"/>
     </p>
   </xsl:template>
   
