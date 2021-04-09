@@ -20,18 +20,18 @@ curseur survole un nom d’élément ou d’attribut.
 <!ATTLIST miroir ID NMTOKEN #REQUIRED>
 
 <!-- doc: Éventuelle photo du miroir (accessible via un lien vers le dossier "photos"), au format JPEG et dont l'intitulé est similaire à l'identifiant du miroir (ex. "miroir1.jpg"). -->
-<!ATTLIST miroir photo (oui | non) #REQUIRED>
+<!ATTLIST miroir photo (oui | non) #IMPLIED>
 
 <!-- doc: Suivi des modifications apportées à la présente fiche -->
-<!ELEMENT suiviModif (creation, modification)>
+<!ELEMENT suiviModif (création, modification?)>
 
 <!-- doc: Information sur la création de la fiche -->
-<!ELEMENT creation (contributeur)>
+<!ELEMENT création (contributeur)>
 
 <!-- doc: Date de création de la fiche au format AAA-MM-JJ Exemples:
   2021-03-08
   1989-10-09 -->
-<!ATTLIST creation date NMTOKEN #REQUIRED>
+<!ATTLIST création date NMTOKEN #REQUIRED>
 
 <!-- doc: Informations sur la dernière modification de la fiche -->
 <!ELEMENT modification (contributeur)>
@@ -41,7 +41,7 @@ curseur survole un nom d’élément ou d’attribut.
   1989-10-09 -->
 <!ATTLIST modification date NMTOKEN #REQUIRED>
 
-<!-- doc: Personne ayant créé ou modifié la fiche au format "Prénom Nom" Exemples:
+<!-- doc: Personne ayant créé ou modifié la fiche au format "Prénom Nom" (un seul contributeur par élément) Exemples:
   Daphné Mathelier
   Céline Hostiou -->
 <!ELEMENT contributeur (#PCDATA)>
@@ -49,26 +49,26 @@ curseur survole un nom d’élément ou d’attribut.
 <!-- doc: Aspect du miroir -->
 <!ELEMENT aspect (style, cadre?)>
 
-<!-- doc: Couleur principale du miroir -->
+<!-- doc: Couleur principale du miroir. S’il y a plusieurs couleurs dominantes, choisir l'attribut « multicolore » -->
 <!ATTLIST aspect couleur (argent | beige | blanc | bleu | brun | cuivre | gris | jaune | multicolore | noir | or | orange | rose | rouge | transparent | vert | violet) #REQUIRED>
 
-<!-- doc: Forme du miroir -->
+<!-- doc: Forme du miroir. Si celle-ci est difficile à décrire, choisir l'attribut « irrégulier » -->
 <!ATTLIST aspect forme (arabesque | carré | hexagone  | irrégulier  | octogone | ovale | rectangle | rond | triangle) #REQUIRED>
 
 <!-- doc: Style du miroir Exemples:
   Industriel
   Joli miroir <em>vintage</em> -->
-<!ELEMENT style (#PCDATA | para | em | lienInterne | lienExterne)*>
+<!ELEMENT style (para+)>
 
 <!-- doc: Époque du miroir Exemples:
   Contemporain
   XVIIIe siècle -->
-<!ATTLIST style epoque CDATA #REQUIRED>
+<!ATTLIST style époque CDATA #REQUIRED>
 
 <!-- doc: Description du cadre Exemples:
   Cadre en métal d'une épaisseur de 5 cm
   Discret cadre en faux bois -->
-<!ELEMENT cadre (#PCDATA | para | em | lienInterne | lienExterne)*>
+<!ELEMENT cadre (para+)>
 
 <!-- doc: Mesures du miroir -->
 <!ELEMENT mesures (hauteur, largeur, profondeur?, poids?)>
@@ -94,25 +94,25 @@ curseur survole un nom d’élément ou d’attribut.
 <!ELEMENT poids (#PCDATA)>
 
 <!-- doc: Origine du miroir -->
-<!ELEMENT origine (dateAcquisition, commentaire?)>
-
-<!-- doc: Contexte d'acquisition du miroir -->
-<!ATTLIST origine moyenAcquisition (achat | don | indéterminé) #REQUIRED>
-
-<!-- doc: Prix d'achat du miroir en euros Exemples:
-  50 €
-  499 € -->
-<!ATTLIST origine prixAchat CDATA #IMPLIED>
+<!ELEMENT origine (commentaire?)>
 
 <!-- doc: Date d'acquisition du miroir au format AAAA-MM-JJ Exemples:
   2021-03-08
   1989-10-09 -->
-<!ELEMENT dateAcquisition (#PCDATA)>
+<!ATTLIST origine dateAcquisition NMTOKEN #REQUIRED>
+
+<!-- doc: Contexte d'acquisition du miroir. Trois possibilités : achat, don ou indéterminé -->
+<!ATTLIST origine moyenAcquisition (achat | don | indéterminé) #REQUIRED>
+
+<!-- doc: Prix d'achat du miroir Exemples:
+  50
+  499 -->
+<!ATTLIST origine prixAchatEuros CDATA #IMPLIED>
 
 <!-- doc: Informations supplémentaires sur le miroir (par exemple sur son créateur ou sur le mouvement artistique dont il est issu) Exemples:
   Miroir très rare de fabrication italienne dont on ne trouve plus que dix exemplaires dans le monde
   <para> Ce miroir a été commercialisé en 2020 par l'enseigne <lienExterne URL="http://www.maisonsdumonde.com">Maison du monde</lienExterne></para> -->
-<!ELEMENT commentaire (#PCDATA | para)*>
+<!ELEMENT commentaire (para+)>
 
 <!-- doc: Valeur estimée du miroir Exemples:
   100 €
@@ -122,7 +122,7 @@ curseur survole un nom d’élément ou d’attribut.
 <!-- doc: Usage attendu du miroir Exemples:
   Ce miroir de poche est très léger et peut se glisser facilement dans une valise
   Grand miroir d'entrée permettant de visualiser un corps en entier -->
-<!ELEMENT usage (#PCDATA | para | em | lienInterne | lienExterne)*>
+<!ELEMENT usage (para+)>
 
 <!-- doc: Bloc de paragraphe pouvant contenir des sous-éléments en emphase et des liens (internes ou externes). Exemples:
   Un miroir très <em>british</em> !

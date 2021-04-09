@@ -40,17 +40,17 @@
                     <valeurPossible>oui</valeurPossible>
                     <valeurPossible>non</valeurPossible>
                 </énuméré>
-                <REQUIRED/>
+                <IMPLIED/>
             </attribut>
             </attributs>
         </élément>
         <élément>
             <idGen>suiviModif</idGen>
             <descriptionPourInfobulle>Suivi des modifications apportées à la présente fiche</descriptionPourInfobulle>
-            <modèleContenuXML>(creation, modification)</modèleContenuXML>
+            <modèleContenuXML>(création, modification?)</modèleContenuXML>
         </élément>    
         <élément>
-            <idGen>creation</idGen>
+            <idGen>création</idGen>
             <descriptionPourInfobulle>Information sur la création de la fiche</descriptionPourInfobulle>
             <modèleContenuXML>(contributeur)</modèleContenuXML>
             <attributs>
@@ -85,13 +85,12 @@
         </élément>
         <élément>
             <idGen>contributeur</idGen>
-            <descriptionPourInfobulle>Personne ayant créé ou modifié la fiche au format "Prénom Nom"</descriptionPourInfobulle>
+            <descriptionPourInfobulle>Personne ayant créé ou modifié la fiche au format "Prénom Nom" (un seul contributeur par élément)</descriptionPourInfobulle>
             <modèleContenuXML>(#PCDATA)</modèleContenuXML>
             <exemplesContenuAttendu>
                 <exemple>Daphné Mathelier</exemple>
                 <exemple>Céline Hostiou</exemple>
             </exemplesContenuAttendu>
-            <commentairesDeModélisation>Un seul contributeur par élément</commentairesDeModélisation>
         </élément>
         <élément>
             <idGen>aspect</idGen>
@@ -101,7 +100,7 @@
             <attributs>
                 <attribut>
                     <nom>forme</nom>
-                    <descriptionPourInfobulle>Forme du miroir</descriptionPourInfobulle>
+                    <descriptionPourInfobulle>Forme du miroir. Si celle-ci est difficile à décrire, choisir l'attribut « irrégulier » </descriptionPourInfobulle>
                     <énuméré>
                         <valeurPossible>arabesque</valeurPossible>
                         <valeurPossible>carré</valeurPossible>
@@ -114,11 +113,11 @@
                         <valeurPossible>triangle</valeurPossible>
                     </énuméré>
                     <REQUIRED/>
-                    <commentairesDeModélisation>Le modélisateur doit choisir une forme dans une liste prédéfinie</commentairesDeModélisation>
+                    <commentairesDeModélisation>Le modélisateur doit choisir une forme dans une liste prédéfinie qui couvre toutes les possibilités de forme. Nous préférons ne pas proposer l'option texte libre ici. Si besoin, l’élément style pourra permettre au descripteur d'en dire plus. </commentairesDeModélisation>
                 </attribut>
                 <attribut>
                     <nom>couleur</nom>
-                    <descriptionPourInfobulle>Couleur principale du miroir</descriptionPourInfobulle>
+                    <descriptionPourInfobulle>Couleur principale du miroir. S’il y a plusieurs couleurs dominantes, choisir l'attribut « multicolore »</descriptionPourInfobulle>
                     <énuméré>
                         <valeurPossible>argent</valeurPossible>
                         <valeurPossible>beige</valeurPossible>
@@ -139,14 +138,14 @@
                         <valeurPossible>violet</valeurPossible>
                     </énuméré>
                     <REQUIRED/>
-                    <commentairesDeModélisation>Le modélisateur doit choisir une couleur dans une liste prédéfinie</commentairesDeModélisation>
+                    <commentairesDeModélisation>Le modélisateur doit choisir une seule couleur principale dans la liste prédéfinie qui couvre toutes les possibilités de couleur. Nous préférons ne pas proposer l’option texte libre ici. Si besoin, l’élément style pourra permettre au descripteur d'en dire plus.</commentairesDeModélisation>
                 </attribut>
             </attributs>
         </élément>
         <élément>
             <idGen>style</idGen>
             <descriptionPourInfobulle>Style du miroir</descriptionPourInfobulle>
-            <modèleContenuXML>(#PCDATA | para | em | lienInterne | lienExterne)*</modèleContenuXML>
+            <modèleContenuXML>(para+)</modèleContenuXML>
             <exemplesContenuAttendu>
                 <exemple>Industriel</exemple>
                 <exemple>Joli miroir &lt;em>vintage&lt;/em></exemple>
@@ -154,7 +153,7 @@
             <commentairesDeModélisation>Précisions sur le style si celui-ci est très marqué. L'emphase et les liens internes et externes sont autorisés. Il est possible d'organiser le propos en plusieurs paragraphes</commentairesDeModélisation>
             <attributs>
                 <attribut>
-                    <nom>epoque</nom>
+                    <nom>époque</nom>
                     <descriptionPourInfobulle>Époque du miroir</descriptionPourInfobulle>
                     <CDATA/>
                     <REQUIRED/>
@@ -169,7 +168,7 @@
         <élément>
             <idGen>cadre</idGen>
             <descriptionPourInfobulle>Description du cadre</descriptionPourInfobulle>
-            <modèleContenuXML>(#PCDATA | para | em | lienInterne | lienExterne)*</modèleContenuXML>
+            <modèleContenuXML>(para+)</modèleContenuXML>
             <exemplesContenuAttendu>
                 <exemple>Cadre en métal d'une épaisseur de 5 cm</exemple>
                 <exemple>Discret cadre en faux bois</exemple>
@@ -223,47 +222,47 @@
         <élément>
             <idGen>origine</idGen>
             <descriptionPourInfobulle>Origine du miroir</descriptionPourInfobulle>
-            <modèleContenuXML>(dateAcquisition, commentaire?)</modèleContenuXML>
+            <modèleContenuXML>(commentaire?)</modèleContenuXML>
             <commentairesDeModélisation>Il est obligatoire de préciser comment le collectionneur a obtenu le miroir. En fonction de cette réponse, d'autres informations pourront être renseignées comme le prix d'achat</commentairesDeModélisation>
         <attributs>
             <attribut>
+                <nom>dateAcquisition</nom>
+                <descriptionPourInfobulle>Date d'acquisition du miroir au format AAAA-MM-JJ</descriptionPourInfobulle>
+                <NMTOKEN/>
+                <REQUIRED/>
+                <exemplesValeurAttendue>
+                    <exemple>2021-03-08</exemple>
+                    <exemple>1989-10-09</exemple>
+                </exemplesValeurAttendue>
+                <commentairesDeModélisation>Information obligatoire permettant d'attribuer les identifiants des miroirs (numérotation chronologique)</commentairesDeModélisation>
+            </attribut>
+            <attribut>
                 <nom>moyenAcquisition</nom>
-                <descriptionPourInfobulle>Contexte d'acquisition du miroir</descriptionPourInfobulle>
+                <descriptionPourInfobulle>Contexte d'acquisition du miroir. Trois possibilités : achat, don ou indéterminé</descriptionPourInfobulle>
                 <énuméré>
                     <valeurPossible>achat</valeurPossible>
                     <valeurPossible>don</valeurPossible>
                     <valeurPossible>indéterminé</valeurPossible>
                 </énuméré>
                 <REQUIRED/>
-                <commentairesDeModélisation>Seulement trois possibilités</commentairesDeModélisation>
             </attribut>
             <attribut>
-                <nom>prixAchat</nom>
-                <descriptionPourInfobulle>Prix d'achat du miroir en euros</descriptionPourInfobulle>
+                <nom>prixAchatEuros</nom>
+                <descriptionPourInfobulle>Prix d'achat du miroir</descriptionPourInfobulle>
                 <CDATA/>
                 <IMPLIED/>
                 <exemplesValeurAttendue>
-                    <exemple>50 €</exemple>
-                    <exemple>499 €</exemple>
+                    <exemple>50</exemple>
+                    <exemple>499</exemple>
                 </exemplesValeurAttendue>
                 <commentairesDeModélisation>À compléter si le miroir a été acheté et que cette information est connue. CDATA car le prix en euros peut comprendre des virgules </commentairesDeModélisation>
             </attribut>
         </attributs>
         </élément>
         <élément>
-            <idGen>dateAcquisition</idGen>
-            <descriptionPourInfobulle>Date d'acquisition du miroir au format AAAA-MM-JJ</descriptionPourInfobulle>
-            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
-            <exemplesContenuAttendu>
-                <exemple>2021-03-08</exemple>
-                <exemple>1989-10-09</exemple>
-            </exemplesContenuAttendu>
-            <commentairesDeModélisation>Information obligatoire permettant d'attribuer les identifiants des miroirs (numérotation chronologique)</commentairesDeModélisation>
-        </élément>
-        <élément>
             <idGen>commentaire</idGen>
             <descriptionPourInfobulle>Informations supplémentaires sur le miroir (par exemple sur son créateur ou sur le mouvement artistique dont il est issu)</descriptionPourInfobulle>
-            <modèleContenuXML>(#PCDATA | para)*</modèleContenuXML>
+            <modèleContenuXML>(para+)</modèleContenuXML>
             <exemplesContenuAttendu>
                 <exemple>Miroir très rare de fabrication italienne dont on ne trouve plus que dix exemplaires dans le monde</exemple>
                 <exemple>&lt;para> Ce miroir a été commercialisé en 2020 par l'enseigne &lt;lienExterne URL="http://www.maisonsdumonde.com">Maison du monde&lt;/lienExterne>&lt;/para></exemple>
@@ -283,7 +282,7 @@
         <élément>
             <idGen>usage</idGen>
             <descriptionPourInfobulle>Usage attendu du miroir</descriptionPourInfobulle>
-            <modèleContenuXML>(#PCDATA | para | em | lienInterne | lienExterne)*</modèleContenuXML>
+            <modèleContenuXML>(para+)</modèleContenuXML>
             <exemplesContenuAttendu>
                 <exemple>Ce miroir de poche est très léger et peut se glisser facilement dans une valise</exemple>
                 <exemple>Grand miroir d'entrée permettant de visualiser un corps en entier</exemple>
