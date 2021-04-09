@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE miroir SYSTEM "file:/Users/celinehostiou/Dropbox/Mon%20Mac%20(MacBook%20Air%20de%20C%C3%A9line)/Documents/DESS%20%C3%A9dition%20num%C3%A9rique%20UdeM/Hiver_2021/-%20INU3011_Documents_structur%C3%A9s/-%20%C3%89valuations/-%20TP3_Mod%C3%A9lisation_pr%C3%A9liminaire/Modele/miroir.dtd">
+<!DOCTYPE miroir SYSTEM "file:/Users/Daphne/Documents/GitHub/INU3011_TP/DTD/miroir.dtd">
 <miroir ID="miroir26" photo="oui">
     <suiviModif>
-        <creation date="2021-02-20">
+        <création date="2021-02-12">
             <contributeur>Céline Hostiou</contributeur>
-        </creation>
-        <modification date="2021-02-21">
+        </création>
+        <modification date="2021-03-01">
             <contributeur>Daphné Mathelier</contributeur>
         </modification>
     </suiviModif>
     <aspect couleur="noir" forme="triangle">
-        <style epoque="contemporain">Ce miroir triangulaire de marque "Tikamoon" et de modèle "Maho"
-            est rehaussé de quatre barres superposées, ouvragées. Celles-ci épousent l'angle supérieur du triangle.</style>
-        <cadre>Le cadre, en métal peint, apporte une touche industrielle et graphique à la pièce où
-            il est exposé.</cadre>
+        <style époque="contemporain">
+            <para>Ce miroir triangulaire de marque "Tikamoon" et de modèle "Maho"
+                est rehaussé de quatre barres superposées, ouvragées. Celles-ci épousent l'angle supérieur du triangle.</para>
+        </style>
+        <cadre>
+            <para>Le cadre, en métal peint, apporte une touche industrielle et graphique à la pièce où il est exposé.</para>
+        </cadre>
     </aspect>
     <mesures>
         <hauteur>60</hauteur>
@@ -21,8 +24,7 @@
         <profondeur>4</profondeur>
         <poids>8</poids>
     </mesures>
-    <origine moyenAcquisition="achat" prixAchat="149">
-        <dateAcquisition>2020-05-01</dateAcquisition>
+    <origine dateAcquisition="2018-02-01" moyenAcquisition="achat" prixAchatEuros="149">
         <commentaire>
             <para>Ce miroir triangulaire, comme le <lienInterne ID="miroir38">miroir
                     38</lienInterne>, a été conçu par l'entreprise Tikamoon, située dans le nord de
@@ -34,5 +36,7 @@
         </commentaire>
     </origine>
     <valeur>En mai 2020, le prix du miroir était de 149 euros.</valeur>
-    <usage>Ce miroir peut agrémenté toutes les pièces de la maison.</usage>
+    <usage>
+        <para>Ce miroir peut agrémenté toutes les pièces de la maison.</para>
+    </usage>
 </miroir>

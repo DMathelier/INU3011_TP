@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE miroir SYSTEM "file:/Users/celinehostiou/Dropbox/Mon%20Mac%20(MacBook%20Air%20de%20C%C3%A9line)/Documents/DESS%20%C3%A9dition%20num%C3%A9rique%20UdeM/Hiver_2021/-%20INU3011_Documents_structur%C3%A9s/-%20%C3%89valuations/-%20TP3_Mod%C3%A9lisation_pr%C3%A9liminaire/Modele/miroir.dtd">
+<!DOCTYPE miroir SYSTEM "file:/Users/Daphne/Documents/GitHub/INU3011_TP/DTD/miroir.dtd">
 <miroir ID="miroir34" photo="oui">
     <suiviModif>
-        <creation date="2021-03-01">
+        <création date="2021-02-27">
             <contributeur>Céline Hostiou</contributeur>
-        </creation>
-        <modification date="2021-03-02">
-            <contributeur>Daphné Mathelier</contributeur>
-        </modification>
+        </création>
     </suiviModif>
     <aspect couleur="transparent" forme="rond">
-        <style epoque="contemporain">Ce miroir rond dit "Forest" a été conçu par la designer Sophie
+        <style époque="contemporain">
+            <para>Ce miroir rond dit "Forest" a été conçu par la designer Sophie
             Larger. Il est à poser par le détenteur sur une base où se dressent des barres
-            verticales en métal, avec finition en doré.</style>
-        <cadre>Ces barres consituent un cadre décalé, dont le miroir semble glisser.</cadre>
+            verticales en métal, avec finition en doré.</para>
+        </style>
+        <cadre>
+            <para>Ces barres consituent un cadre décalé, dont le miroir semble glisser.</para>
+        </cadre>
     </aspect>
     <mesures>
         <hauteur>60</hauteur>
         <largeur>44</largeur>
         <profondeur>10</profondeur>
     </mesures>
-    <origine moyenAcquisition="achat" prixAchat="1230">
-        <dateAcquisition>2020-05-19</dateAcquisition>
+    <origine dateAcquisition="2018-09-19" moyenAcquisition="achat" prixAchatEuros="825">
         <commentaire>
             <para>Ce miroir circulaire, comme le <lienInterne ID="miroir50">miroir 50</lienInterne>,
                 a été acheté chez Roche Bobois, l'un des leaders mondiaux du mobilier design haut de
@@ -30,6 +30,8 @@
                     >lien</lienExterne>.</para>
         </commentaire>
     </origine>
-    <valeur>En mai 2020, le prix du miroir était de 1230 dollars.</valeur>
-    <usage>Ce miroir est voué à être fixé sur une commode, un buffet, un secrétaire.</usage>
+    <valeur>En mai 2020, le prix du miroir était de 1230 dollars (825 euros).</valeur>
+    <usage>
+        <para>Ce miroir est voué à être fixé sur une commode, un buffet, un secrétaire.</para>
+    </usage>
 </miroir>

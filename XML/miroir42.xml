@@ -1,28 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE miroir SYSTEM "file:/Users/Daphne/ownCloud/4_DESS/Trimestre2/INU3011_Docs-structures/EVAL/TP3/Modele/miroir.dtd">
+<!DOCTYPE miroir SYSTEM "file:/Users/Daphne/Documents/GitHub/INU3011_TP/DTD/miroir.dtd">
 <miroir ID="miroir42" photo="oui">
     <suiviModif>
-        <creation date="2021-02-24">
+        <création date="2021-03-13">
             <contributeur>Daphné Mathelier</contributeur>
-        </creation>
-        <modification date="2021-03-09">
+        </création>
+        <modification date="2021-04-09">
             <contributeur>Céline Hostiou</contributeur>
         </modification>
     </suiviModif>
     <aspect couleur="blanc" forme="rectangle">
-        <style epoque="XIXe siècle">Ce miroir rectangulaire comporte un trumeau imitant les
+        <style époque="XIXe siècle">
+            <para>Ce miroir rectangulaire comporte un trumeau imitant les
             pratiques de décoration qui ont eu cours à partir du règne de Louis XVI et se sont
             poursuivies au XIXe siècle. La pièce imitant le bois sculpté est soulignée d'une
-            ornementation florale en cuivre.</style>
-        <cadre>Le miroir est entouré d'un cadre en résine fabriqué à la commande dans un atelier
-            d'artisan en France.</cadre>
+            ornementation florale en cuivre.</para>
+        </style>
+        <cadre>
+            <para>Le miroir est entouré d'un cadre en résine fabriqué à la commande dans un atelier
+                d'artisan en France.</para>
+        </cadre>
     </aspect>
     <mesures>
         <hauteur>176</hauteur>
         <largeur>97</largeur>
     </mesures>
-    <origine moyenAcquisition="achat" prixAchat="715 €">
-        <dateAcquisition>2019-07-20</dateAcquisition>
+    <origine dateAcquisition="2019-11-20" moyenAcquisition="achat" prixAchatEuros="715">
         <commentaire>
             <para>Ce miroir a été acquis initialement par le collectionneur dans un magasin de la
                 chaîne française <lienExterne URL="http://www.maisonsdumonde.com/">Maisons du
@@ -34,7 +37,8 @@
         </commentaire>
     </origine>
     <valeur>En février 2021, le prix du miroir était estimé à 715 €</valeur>
-    <usage>Ce miroir à fixer convient particulièrement à un salon, ou bien à une chambre, une entrée
-        pour la vérification de l'habillement de pied en cap. Selon le vendeur, il est <em>idéal pour un salon ou même un dressing</em>
+    <usage>
+        <para>Ce miroir à fixer convient particulièrement à un salon, ou bien à une chambre, une entrée
+            pour la vérification de l'habillement de pied en cap. Selon le vendeur, il est <em>idéal pour un salon ou même un dressing</em></para>
     </usage>
 </miroir>

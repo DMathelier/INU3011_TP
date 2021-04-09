@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE miroir SYSTEM "file:/Users/celinehostiou/Dropbox/Mon%20Mac%20(MacBook%20Air%20de%20C%C3%A9line)/Documents/DESS%20%C3%A9dition%20num%C3%A9rique%20UdeM/Hiver_2021/-%20INU3011_Documents_structur%C3%A9s/-%20%C3%89valuations/-%20TP3_Mod%C3%A9lisation_pr%C3%A9liminaire/Modele/miroir.dtd">
+<!DOCTYPE miroir SYSTEM "file:/Users/Daphne/Documents/GitHub/INU3011_TP/DTD/miroir.dtd">
 <miroir ID="miroir22" photo="oui">
     <suiviModif>
-        <creation date="2021-02-13">
+        <création date="2021-02-03">
             <contributeur>Céline Hostiou</contributeur>
-        </creation>
-        <modification date="2021-02-15">
-            <contributeur>Daphné Mathelier</contributeur>
-        </modification>
+        </création>
     </suiviModif>
     <aspect couleur="argent" forme="rond">
-        <style epoque="vintage">Ce miroir rond date des années 1960. Il a pour matériaux le verre et
-            le cristal.</style>
-        <cadre>Le cadre est gravé et biseauté.</cadre>
+        <style époque="vintage">
+            <para>Ce miroir rond date des années 1960. Il a pour matériaux le verre et
+            le cristal.</para>
+        </style>
+        <cadre>
+            <para>Le cadre est gravé et biseauté.</para>
+        </cadre>
     </aspect>
     <mesures>
         <hauteur>62</hauteur>
         <largeur>62</largeur>
     </mesures>
-    <origine moyenAcquisition="achat" prixAchat="250">
-        <dateAcquisition>2020-04-15</dateAcquisition>
+    <origine dateAcquisition="2017-12-15" moyenAcquisition="achat" prixAchatEuros="250">
         <commentaire>
             <para>Ce miroir circulaire, comme le <lienInterne ID="miroir50">miroir 50</lienInterne>,
                 a été acquis auprès d'un brocanteur de Saint-Ouen, situé près de Paris. Bien que
@@ -29,6 +29,8 @@
         </commentaire>
     </origine>
     <valeur>En mai 2020, le prix du miroir était de 250 euros.</valeur>
-    <usage>Ce miroir peut être fixé dans n'importe quelle pièce du logement, dans un vestibule, un
-        couloir.</usage>
+    <usage>
+        <para>Ce miroir peut être fixé dans n'importe quelle pièce du logement, dans un vestibule, un
+            couloir.</para>
+    </usage>
 </miroir>

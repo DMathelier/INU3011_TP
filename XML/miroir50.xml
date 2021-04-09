@@ -2,10 +2,10 @@
 <!DOCTYPE miroir SYSTEM "file:/Users/Daphne/Documents/GitHub/INU3011_TP/DTD/miroir.dtd">
 <miroir ID="miroir50" photo="oui">
     <suiviModif>
-        <création date="2021-02-12">
+        <création date="2021-03-22">
             <contributeur>Daphné Mathelier</contributeur>
         </création>
-        <modification date="2021-03-09">
+        <modification date="2021-04-09">
             <contributeur>Céline Hostiou</contributeur>
         </modification>
     </suiviModif>

@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE miroir SYSTEM "file:/Users/Daphne/Documents/GitHub/INU3011_TP/DTD/miroir.dtd">
-<miroir ID="miroir5" photo="non">
+<miroir ID="miroir5">
     <suiviModif>
-        <creation date="2021-02-06">
+        <création date="2021-01-06">
             <contributeur>Céline Hostiou</contributeur>
-        </creation>
-        <modification date="2021-03-09">
-            <contributeur>Daphné Mathelier</contributeur>
-        </modification>
+        </création>
     </suiviModif>
     <aspect couleur="transparent" forme="octogone">
-        <style epoque="XXe siècle">Ce miroir octogonal comporte dans sa partie inférieure un vase
+        <style époque="XXe siècle">
+            <para>Ce miroir octogonal comporte dans sa partie inférieure un vase
             capable de contenir des fleurs artificielles. Des fragments de miroir en bandes
             verticales se trouvent sur ses parties latérales et donnent un effet d'éclatement de la
-            perspective.</style>
+            perspective.</para>
+        </style>
     </aspect>
     <mesures>
         <hauteur>24</hauteur>
         <largeur>24</largeur>
     </mesures>
-    <origine moyenAcquisition="don">
-        <dateAcquisition>2017-02-13</dateAcquisition>
+    <origine dateAcquisition="2017-02-13" moyenAcquisition="don">
     </origine>
 </miroir>

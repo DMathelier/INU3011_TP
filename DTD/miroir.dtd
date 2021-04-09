@@ -49,10 +49,10 @@ curseur survole un nom d’élément ou d’attribut.
 <!-- doc: Aspect du miroir -->
 <!ELEMENT aspect (style, cadre?)>
 
-<!-- doc: Couleur principale du miroir. S’il y a plusieurs couleurs dominantes, choisir l'attribut « multicolore » -->
+<!-- doc: Couleur principale du miroir. S’il y a plusieurs couleurs dominantes, choisir la valeur d'attribut « multicolore » -->
 <!ATTLIST aspect couleur (argent | beige | blanc | bleu | brun | cuivre | gris | jaune | multicolore | noir | or | orange | rose | rouge | transparent | vert | violet) #REQUIRED>
 
-<!-- doc: Forme du miroir. Si celle-ci est difficile à décrire, choisir l'attribut « irrégulier » -->
+<!-- doc: Forme du miroir. Si celle-ci est difficile à décrire, choisir la valeur d'attribut « irrégulier » -->
 <!ATTLIST aspect forme (arabesque | carré | hexagone  | irrégulier  | octogone | ovale | rectangle | rond | triangle) #REQUIRED>
 
 <!-- doc: Style du miroir Exemples:
@@ -68,7 +68,7 @@ curseur survole un nom d’élément ou d’attribut.
 <!-- doc: Description du cadre Exemples:
   Cadre en métal d'une épaisseur de 5 cm
   Discret cadre en faux bois -->
-<!ELEMENT cadre (para+)>
+<!ELEMENT cadre (para)>
 
 <!-- doc: Mesures du miroir -->
 <!ELEMENT mesures (hauteur, largeur, profondeur?, poids?)>

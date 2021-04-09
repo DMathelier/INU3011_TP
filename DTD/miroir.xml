@@ -100,7 +100,7 @@
             <attributs>
                 <attribut>
                     <nom>forme</nom>
-                    <descriptionPourInfobulle>Forme du miroir. Si celle-ci est difficile à décrire, choisir l'attribut « irrégulier » </descriptionPourInfobulle>
+                    <descriptionPourInfobulle>Forme du miroir. Si celle-ci est difficile à décrire, choisir la valeur d'attribut « irrégulier » </descriptionPourInfobulle>
                     <énuméré>
                         <valeurPossible>arabesque</valeurPossible>
                         <valeurPossible>carré</valeurPossible>
@@ -117,7 +117,7 @@
                 </attribut>
                 <attribut>
                     <nom>couleur</nom>
-                    <descriptionPourInfobulle>Couleur principale du miroir. S’il y a plusieurs couleurs dominantes, choisir l'attribut « multicolore »</descriptionPourInfobulle>
+                    <descriptionPourInfobulle>Couleur principale du miroir. S’il y a plusieurs couleurs dominantes, choisir la valeur d'attribut « multicolore »</descriptionPourInfobulle>
                     <énuméré>
                         <valeurPossible>argent</valeurPossible>
                         <valeurPossible>beige</valeurPossible>
@@ -168,7 +168,7 @@
         <élément>
             <idGen>cadre</idGen>
             <descriptionPourInfobulle>Description du cadre</descriptionPourInfobulle>
-            <modèleContenuXML>(para+)</modèleContenuXML>
+            <modèleContenuXML>(para)</modèleContenuXML>
             <exemplesContenuAttendu>
                 <exemple>Cadre en métal d'une épaisseur de 5 cm</exemple>
                 <exemple>Discret cadre en faux bois</exemple>

@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE miroir SYSTEM "file:/Users/celinehostiou/Dropbox/Mon%20Mac%20(MacBook%20Air%20de%20C%C3%A9line)/Documents/DESS%20%C3%A9dition%20num%C3%A9rique%20UdeM/Hiver_2021/-%20INU3011_Documents_structur%C3%A9s/-%20%C3%89valuations/-%20TP3_Mod%C3%A9lisation_pr%C3%A9liminaire/Modele/miroir.dtd">
+<!DOCTYPE miroir SYSTEM "file:/Users/Daphne/Documents/GitHub/INU3011_TP/DTD/miroir.dtd">
 <miroir ID="miroir38" photo="oui">
     <suiviModif>
-        <creation date="2021-03-13">
+        <création date="2021-03-01">
             <contributeur>Céline Hostiou</contributeur>
-        </creation>
-        <modification date="2021-03-15">
+        </création>
+        <modification date="2021-04-09">
             <contributeur>Daphné Mathelier</contributeur>
         </modification>
     </suiviModif>
     <aspect couleur="transparent" forme="triangle">
-        <style epoque="XXe siècle">Ce miroir triangulaire est de style Art Déco. Il présente une
+        <style époque="XXe siècle">
+            <para>Ce miroir triangulaire est de style Art Déco. Il présente une
             belle mise en abyme avec son petit miroir intégré au tain mercurisé de couleur
-            bronze.</style>
-        <cadre>Il est encadré d'un sillon qui crée un mince contour biseauté.</cadre>
+            bronze.</para>
+        </style>
+        <cadre>
+            <para>Il est encadré d'un sillon qui crée un mince contour biseauté.</para>
+        </cadre>
     </aspect>
     <mesures>
         <hauteur>76</hauteur>
         <largeur>59</largeur>
         <profondeur>1</profondeur>
     </mesures>
-    <origine moyenAcquisition="achat" prixAchat="290">
-        <dateAcquisition>2020-06-07</dateAcquisition>
+    <origine dateAcquisition="2019-04-07" moyenAcquisition="achat" prixAchatEuros="290">
         <commentaire>
             <para>Ce miroir a été acquis auprès de la galerie Majdeltier, située dans le nord de la
                 France, à Tourcoing, tout comme le <lienInterne ID="miroir45">miroir
@@ -32,6 +35,8 @@
         </commentaire>
     </origine>
     <valeur>En juin 2020, le prix du miroir était de 290 €.</valeur>
-    <usage>Ce miroir est voué à être fixé à un mur, sans meuble dessous, pour bien mettre en valeur
-        sa forme triangulaire tombante.</usage>
+    <usage>
+        <para>Ce miroir est voué à être fixé à un mur, sans meuble dessous, pour bien mettre en valeur
+            sa forme triangulaire tombante.</para>
+    </usage>
 </miroir>
