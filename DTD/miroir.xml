@@ -38,9 +38,8 @@
                 <descriptionPourInfobulle>Éventuelle photo du miroir (accessible via un lien vers le dossier "photos"), au format JPEG et dont l'intitulé est similaire à l'identifiant du miroir (ex. "miroir1.jpg").</descriptionPourInfobulle>
                 <énuméré>
                     <valeurPossible>oui</valeurPossible>
-                    <valeurPossible>non</valeurPossible>
                 </énuméré>
-                <IMPLIED/>
+                <FIXED/>
             </attribut>
             </attributs>
         </élément>

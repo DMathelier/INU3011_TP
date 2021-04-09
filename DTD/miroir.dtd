@@ -20,7 +20,7 @@ curseur survole un nom d’élément ou d’attribut.
 <!ATTLIST miroir ID NMTOKEN #REQUIRED>
 
 <!-- doc: Éventuelle photo du miroir (accessible via un lien vers le dossier "photos"), au format JPEG et dont l'intitulé est similaire à l'identifiant du miroir (ex. "miroir1.jpg"). -->
-<!ATTLIST miroir photo (oui | non) #IMPLIED>
+<!ATTLIST miroir photo (oui) #FIXED "oui">
 
 <!-- doc: Suivi des modifications apportées à la présente fiche -->
 <!ELEMENT suiviModif (création, modification?)>
