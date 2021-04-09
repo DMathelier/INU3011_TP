@@ -28,7 +28,8 @@ conception de votre transformation.
       </head>
       <body>
         <h1>
-          <xsl:value-of select="@ID"/>
+          <xsl:value-of select="@ID"/> <!-- titre du miroir = son identifiant 
+            mais du coup c'est pas très joli comme titre de fiche... -->
         </h1>
         <div>
           <p>
@@ -58,19 +59,19 @@ conception de votre transformation.
   <xsl:template match="suiviModif"> 
   </xsl:template>
   
-  <xsl:template match="création"> 
+  <xsl:template match="création"> <!-- + paramétrage @date -->
   </xsl:template>
   
-  <xsl:template match="modification"> 
+  <xsl:template match="modification"> <!-- + paramétrage @date -->
   </xsl:template>
   
   <xsl:template match="contributeur"> 
   </xsl:template>
 
-  <xsl:template match="aspect"> 
+  <xsl:template match="aspect"> <!-- + paramétrage @couleur et @forme -->
   </xsl:template>
   
-  <xsl:template match="style"> 
+  <xsl:template match="style"> <!-- + paramétrage @époque -->
   </xsl:template>
 
   <xsl:template match="cadre"> 
@@ -91,7 +92,7 @@ conception de votre transformation.
   <xsl:template match="poids"> 
   </xsl:template>
   
-  <xsl:template match="origine"> 
+  <xsl:template match="origine"> <!-- + paramétrage @dateAcquisition, @moyenAcquisition et @prixAchatEuros -->
   </xsl:template>
   
   <xsl:template match="commentaire"> 
@@ -102,5 +103,19 @@ conception de votre transformation.
   
   <xsl:template match="usage"> 
   </xsl:template>
+  
+  <xsl:template match="para"> 
+  </xsl:template>
+  
+  <xsl:template match="em"> 
+  </xsl:template>
+  
+  <xsl:template match="lienInterne">  <!-- + paramétrage @ID -->
+  </xsl:template>
+  
+  <xsl:template match="lienExterne"> <!-- + paramétrage @URL -->
+  </xsl:template>
+  
+  
 
 </xsl:stylesheet>
