@@ -77,19 +77,39 @@ conception de votre transformation.
   <xsl:template match="cadre"> 
   </xsl:template>
   
-  <xsl:template match="mesures"> 
+  <xsl:template match="mesures">
+    <p>
+      <strong>Mesures</strong>
+      <xsl:apply-templates select="largeur"/>
+    </p>
   </xsl:template>
   
-  <xsl:template match="hauteur"> 
+  <xsl:template match="hauteur">
+    <p>
+      <strong>Hauteur : </strong>
+      <xsl:value-of select="."/> cm
+    </p>
   </xsl:template>
   
-  <xsl:template match="largeur"> 
+  <xsl:template match="largeur">
+    <p>
+      <strong>Largeur : </strong>
+      <xsl:value-of select="."/> cm
+    </p>
   </xsl:template>
   
-  <xsl:template match="profondeur"> 
+  <xsl:template match="profondeur">
+    <p>
+      <strong>Profondeur : </strong>
+      <xsl:value-of select="."/> cm
+    </p>
   </xsl:template>
   
-  <xsl:template match="poids"> 
+  <xsl:template match="poids">
+    <p>
+      <strong>Poids : </strong>
+      <xsl:value-of select="."/> kg
+    </p>
   </xsl:template>
   
   <xsl:template match="origine"> <!-- + paramétrage @dateAcquisition, @moyenAcquisition et @prixAchatEuros -->
