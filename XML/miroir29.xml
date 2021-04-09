@@ -25,7 +25,7 @@
         <profondeur>6</profondeur>
         <poids>7,10</poids>
     </mesures>
-    <origine dateAcquisition="2018-05-12" moyenAcquisition="achat" prixAchatEuros="33,50">
+    <origine dateAcquisition="2018-05-12" moyenAcquisition="achat" prixAchatEuros="33">
         <commentaire>
             <para>Ce miroir rectangulaire, comme le <lienInterne ID="miroir42">miroir
                     42</lienInterne>, a été acheté chez Ikea. La fiche de ce produit est consultable
@@ -34,7 +34,7 @@
                     >lien</lienExterne>.</para>
         </commentaire>
     </origine>
-    <valeur>En mai 2020, le prix du miroir était de 49,99 dollars (33,50 euros).</valeur>
+    <valeur>En mai 2020, le prix du miroir était de 50 dollars (33 euros).</valeur>
     <usage>
         <para>Des crochets situés derrière les miroirs latéraux permettent de ranger facilement ses
         bijoux. Les sections pivotantes du miroir permettent de s'admirer sous différents angles.

@@ -24,7 +24,7 @@
         <profondeur>4</profondeur>
         <poids>10</poids>
     </mesures>
-    <origine dateAcquisition="2021-02-10" moyenAcquisition="achat" prixAchatEuros="1196,90">
+    <origine dateAcquisition="2021-02-10" moyenAcquisition="achat" prixAchatEuros="1197">
         <commentaire>
             <para>Ce miroir fait partie de la collection 2021 de l'enseigne Maisons du monde. Il
                 permet selon le vendeur de donner un <em>coup d'éclat</em> à son intérieur (voir la
@@ -34,7 +34,7 @@
             <para>Dans le même style, voir le <lienInterne ID="miroir22">miroir 22</lienInterne> de la collection.</para>
         </commentaire>
     </origine>
-    <valeur>En mars 2020 le prix du miroir était à 1196,90 €</valeur>
+    <valeur>En mars 2020 le prix du miroir était à 1197 euros</valeur>
     <usage>
         <para>Ce miroir à fixer peut trouver sa place dans toutes les pièces de la maison.</para>
     </usage>
