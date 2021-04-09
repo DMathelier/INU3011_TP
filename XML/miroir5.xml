@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE miroir SYSTEM "file:/Users/celinehostiou/Dropbox/Mon%20Mac%20(MacBook%20Air%20de%20C%C3%A9line)/Documents/DESS%20%C3%A9dition%20num%C3%A9rique%20UdeM/Hiver_2021/-%20INU3011_Documents_structur%C3%A9s/-%20%C3%89valuations/-%20TP3_Mod%C3%A9lisation_pr%C3%A9liminaire/Modele/miroir.dtd">
+<!DOCTYPE miroir SYSTEM "file:/Users/Daphne/Documents/GitHub/INU3011_TP/DTD/miroir.dtd">
 <miroir ID="miroir5" photo="non">
     <suiviModif>
         <creation date="2021-02-06">

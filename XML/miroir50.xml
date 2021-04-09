@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE miroir SYSTEM "file:/Users/Daphne/ownCloud/4_DESS/Trimestre2/INU3011_Docs-structures/EVAL/TP3/Modele/miroir.dtd">
+<!DOCTYPE miroir SYSTEM "file:/Users/Daphne/Documents/GitHub/INU3011_TP/DTD/miroir.dtd">
 <miroir ID="miroir50" photo="oui">
     <suiviModif>
         <creation date="2021-02-12">
