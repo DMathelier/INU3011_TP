@@ -77,7 +77,7 @@ conception de votre transformation.
   <xsl:template match="cadre"> 
   </xsl:template>
   
-  <xsl:template match="mesures">
+  <xsl:template match="mesures"> <!-- OK sauf le style de mesure : en plus grand ? ou en liste ? -->
     <p>
       <strong>Mesures</strong>
       <xsl:apply-templates select="hauteur"/>
@@ -87,21 +87,21 @@ conception de votre transformation.
     </p>
   </xsl:template>
   
-  <xsl:template match="hauteur">
+  <xsl:template match="hauteur"> <!-- OK -->
     <p>
       <strong>Hauteur : </strong>
       <xsl:value-of select="."/> cm
     </p>
   </xsl:template>
   
-  <xsl:template match="largeur">
+  <xsl:template match="largeur"> <!-- OK -->
     <p>
       <strong>Largeur : </strong>
       <xsl:value-of select="."/> cm
     </p>
   </xsl:template>
   
-  <xsl:template match="profondeur">
+  <xsl:template match="profondeur"> <!-- OK -->
     <p>
       <strong>Profondeur : </strong>
       <xsl:value-of select="."/> cm
@@ -127,16 +127,20 @@ conception de votre transformation.
   <xsl:template match="usage"> 
   </xsl:template>
   
-  <xsl:template match="para"> 
+  <xsl:template match="para"> <!-- OK -->
+    <p><xsl:apply-templates /></p>
   </xsl:template>
   
-  <xsl:template match="em"> 
+  <xsl:template match="em">
+    <em><xsl:apply-templates /></em> <!-- OK -->
   </xsl:template>
   
-  <xsl:template match="lienInterne">  <!-- + paramétrage @ID -->
+  <xsl:template match="lienInterne"> <!-- + paramétrage @ID -->
+    <a href="{@ID}.xml"><xsl:value-of select="."/></a>
   </xsl:template>
   
   <xsl:template match="lienExterne"> <!-- + paramétrage @URL -->
+    <a href="{@URL}"><xsl:value-of select="."/></a>
   </xsl:template>
   
   
