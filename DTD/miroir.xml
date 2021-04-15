@@ -34,12 +34,14 @@
                     </exemplesValeurAttendue>
                     <commentairesDeModélisation>L'identifiant attribué à chaque miroir permet de nommer à la fois la fiche XML et l'image associée (s'il y en a une)</commentairesDeModélisation>
                 </attribut>
-            <attribut>
-                <nom>photo</nom>
-                <descriptionPourInfobulle>Éventuelle photo du miroir (accessible via un lien vers le dossier "photos"), au format JPEG et dont l'intitulé est similaire à l'identifiant du miroir (ex. "miroir1.jpg").</descriptionPourInfobulle>
-                <NMTOKEN/>
-                <FIXED>oui</FIXED>
-            </attribut>
+                <attribut>
+                    <nom>photo</nom>
+                    <descriptionPourInfobulle>Éventuelle photo du miroir (accessible via un lien vers le dossier "photos"), au format JPEG et dont l'intitulé est similaire à l'identifiant du miroir (ex. "miroir1.jpg").</descriptionPourInfobulle>
+                    <énuméré>
+                        <valeurPossible>oui</valeurPossible>
+                    </énuméré>
+                    <IMPLIED/>
+                </attribut>
             </attributs>
         </élément>
         <élément>
@@ -290,7 +292,7 @@
         <élément>
             <idGen>para</idGen>
             <descriptionPourInfobulle>Bloc de paragraphe pouvant contenir des sous-éléments en emphase et des liens (internes ou externes).</descriptionPourInfobulle>
-            <modèleContenuXML>(#PCDATA | em | lienInterne | lienExterne)*</modèleContenuXML>
+            <modèleContenuXML>(#PCDATA | em | sup | lienInterne | lienExterne)*</modèleContenuXML>
             <exemplesContenuAttendu>
                 <exemple>Un miroir très &lt;em>british&lt;/em> !</exemple>
                 <exemple>Dans le même style, voir également &lt;lien ID="miroir22">ce miroir&lt;/lien>.</exemple>
@@ -303,6 +305,15 @@
             <exemplesContenuAttendu>
                 <exemple>style &lt;em>british&lt;/em> et romantique</exemple>
                 <exemple>miroir &lt;em>so chic&lt;/em></exemple>
+            </exemplesContenuAttendu>
+        </élément>
+        <élément>
+            <idGen>sup</idGen>
+            <descriptionPourInfobulle>Passage en exposant.</descriptionPourInfobulle>
+            <modèleContenuXML>(#PCDATA)</modèleContenuXML>
+            <exemplesContenuAttendu>
+                <exemple>XX&lt;sup>e&lt;/sup> siècle</exemple>
+                <exemple>sa 1&lt;sup>re&lt;/sup> utilisation</exemple>
             </exemplesContenuAttendu>
         </élément>
         <élément>

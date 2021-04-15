@@ -20,19 +20,19 @@
       <body>
         <h1>Catalogue de miroirs de la collection privée de Narcisse Brillant</h1>
         <hr/>
-        <h2> Code d’identification :
+        <h2 id="identification"> Code d’identification :
           <xsl:value-of select="@ID"/> <!-- titre du miroir = son identifiant 
             mais du coup c'est pas très joli comme titre de fiche... -->
         </h2>
-        <div style="float:right; text-align:center; margin-right:1em; padding:1em;">
+        <div>
           <p>
             <xsl:choose>
               <!-- Photo ou non -->
-              <xsl:when test="@photo = 'oui'">
+              <xsl:when test="@photo">
                 <!-- quand l'attribut photo est renseigné -->
-                <img src="../photos/{@ID}.jpg" alt="{@ID}" style="height:75%; width: auto;"/>
+                <img src="../photos/{@ID}.jpg" alt="{@ID}"/>
               </xsl:when>
-              <xsl:otherwise> Photo indisponible </xsl:otherwise>
+              <xsl:otherwise> <span class="bold">Photo indisponible</span> </xsl:otherwise>
             </xsl:choose>
           </p>
         </div>
@@ -57,13 +57,13 @@
   </xsl:template>
   
   <xsl:template match="création"> <!-- + paramétrage @date -->
-    <li style="font-size: small;"> <strong>Date de création de la fiche : </strong> 
-      <xsl:value-of select="@date"/> ; <strong>créateur : </strong> <xsl:value-of select="contributeur"/> </li>
+    <li><span class="bold">Date de création de la fiche : </span> <xsl:value-of select="@date"/> ; 
+      <span class="bold">créateur : </span> <xsl:value-of select="contributeur"/> </li>
   </xsl:template>
   
   <xsl:template match="modification"> <!-- + paramétrage @date -->
-    <li style="font-size: small;"> <strong>Date de modification de la fiche : </strong> 
-      <xsl:value-of select="@date"/> ; <strong>contributeur : </strong> <xsl:value-of select="contributeur"/> </li>
+    <li> <span class="bold">Date de modification de la fiche : </span> <xsl:value-of select="@date"/> ; 
+      <span class="bold">contributeur : </span> <xsl:value-of select="contributeur"/> </li>
   </xsl:template>
   
   <!--<xsl:template match="contributeur"> 
@@ -72,25 +72,27 @@
   <xsl:template match="aspect"> <!-- + paramétrage @couleur et @forme -->
     <div>
       <h2>Aspect</h2>
-      <p> <strong>Couleur</strong> : <xsl:value-of select="@couleur"/></p>
-      <p> <strong>Forme</strong> : <xsl:value-of select="@forme"/></p>
+      <p> <span class="bold">Couleur : </span> <xsl:value-of select="@couleur"/></p>
+      <p> <span class="bold">Forme : </span> <xsl:value-of select="@forme"/></p>
       <xsl:apply-templates select="style"/>
       <xsl:apply-templates select="cadre"/>
     </div>
   </xsl:template>
   
   <xsl:template match="style"> <!-- + paramétrage @époque -->
-    <p><strong>Style :</strong> <xsl:value-of select="."/></p>
+    <p> <span class="bold">Style : </span> <xsl:value-of select="."/></p>
     <xsl:choose>
       <xsl:when test="@époque">
-        <p> <strong>Époque : </strong> <xsl:value-of select="@époque"/></p>
+        <p> <span class="bold">Époque : </span> <xsl:value-of select="@époque"/></p>
+        <xsl:apply-templates select="*"/>
       </xsl:when>
       <xsl:otherwise/>
     </xsl:choose>
   </xsl:template>
 
   <xsl:template match="cadre">
-    <p><strong>Cadre :</strong> <xsl:value-of select="."/></p>
+    <p> <span class="bold">Cadre :</span> <xsl:value-of select="."/></p>
+    <xsl:apply-templates select="*"/>
   </xsl:template>
   
   <xsl:template match="mesures"> <!-- OK sauf le style de mesure : en plus grand ? ou en liste ? -->
@@ -104,33 +106,33 @@
   </xsl:template>
   
   <xsl:template match="hauteur"> <!-- OK -->
-    <p><strong>Hauteur : </strong>
+    <p> <span class="bold">Hauteur : </span>
       <xsl:value-of select="."/> cm
     </p> </xsl:template>
   
   <xsl:template match="largeur"> <!-- OK -->
-    <p> <strong>Largeur : </strong>
+    <p> <span class="bold">Largeur : </span>
       <xsl:value-of select="."/> cm
     </p></xsl:template>
   
   <xsl:template match="profondeur"> <!-- OK -->
-    <p> <strong>Profondeur : </strong>
+    <p> <span class="bold">Profondeur : </span>
       <xsl:value-of select="."/> cm
     </p></xsl:template>
   
   <xsl:template match="poids">
-    <p><strong>Poids : </strong>
+    <p><span class="bold">Poids : </span>
       <xsl:value-of select="."/> kg
     </p></xsl:template>
   
   <xsl:template match="origine"> <!-- + paramétrage @dateAcquisition, @moyenAcquisition et @prixAchatEuros -->
     <div>
       <h2>Origine</h2>
-      <p> <strong>Date d’acquisition</strong> : <xsl:value-of select="@dateAcquisition"/></p>
-      <p> <strong>Moyen d’acquisition</strong> : <xsl:value-of select="@moyenAcquisition"/></p>
+      <p> <span class="bold">Date d’acquisition</span> : <xsl:value-of select="@dateAcquisition"/></p>
+      <p> <span class="bold">Moyen d’acquisition</span> : <xsl:value-of select="@moyenAcquisition"/></p>
       <xsl:choose>
         <xsl:when test="@prixAchatEuros">
-          <p> <strong>Prix d’achat</strong> : <xsl:value-of select="@prixAchatEuros"/> €</p>
+          <p> <span class="bold">Prix d’achat</span> : <xsl:value-of select="@prixAchatEuros"/> €</p>
         </xsl:when>
         <xsl:otherwise/>
       </xsl:choose>
@@ -139,7 +141,10 @@
   </xsl:template>
   
   <xsl:template match="commentaire">
-    <p><strong>Commentaire : </strong> <xsl:apply-templates select="*"/></p>
+    <div>
+      <h3>Commentaire</h3>
+      <xsl:apply-templates select="*"/>
+    </div>
   </xsl:template>
   
   <xsl:template match="valeur">
@@ -152,7 +157,7 @@
   <xsl:template match="usage">
     <div>
       <h2>Usage attendu</h2>
-      <p><xsl:value-of select="."/></p>
+      <xsl:apply-templates select="*"/>
     </div>
   </xsl:template>
   
@@ -162,6 +167,10 @@
   
   <xsl:template match="em">
     <em><xsl:apply-templates /></em> <!-- OK -->
+  </xsl:template>
+  
+  <xsl:template match="sup">
+    <sup><xsl:apply-templates /></sup> <!-- OK -->
   </xsl:template>
   
   <xsl:template match="lienInterne"> <!-- + paramétrage @ID -->

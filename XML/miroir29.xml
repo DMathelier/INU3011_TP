@@ -13,12 +13,12 @@
     </suiviModif>
     <aspect couleur="noir" forme="rectangle">
         <style époque="contemporain">
-            <para>Ce miroir rectangulaire dit "Karmsund", vendu par la chaîne de
-            magasins Ikea, se déploie en triptyque. Il dispose de pieds et est coiffé d'une
+            <para>ce miroir rectangulaire dit « Karmsund », vendu par la chaîne de
+            magasins Ikea, se déploie en triptyque. Il dispose de pieds et est coiffé d’une
             ornementation, tous en fer forgé, tous détachables.</para>
         </style>
         <cadre>
-            <para>Le cadre est en acier galvanisé noir.</para>
+            <para>le cadre est en acier galvanisé noir.</para>
         </cadre>
     </aspect>
     <mesures>
@@ -36,10 +36,10 @@
                     >lien</lienExterne>.</para>
         </commentaire>
     </origine>
-    <valeur>En mai 2020, le prix du miroir était de 50 dollars (33 euros).</valeur>
+    <valeur>En mai 2020, le prix du miroir était de 50 $CAN (33 €).</valeur>
     <usage>
         <para>Des crochets situés derrière les miroirs latéraux permettent de ranger facilement ses
-        bijoux. Les sections pivotantes du miroir permettent de s'admirer sous différents angles.
+        bijoux. Les sections pivotantes du miroir permettent de s’admirer sous différents angles.
         Peut être installé dans toutes les pièces de la maison, dont la salle de bains, car il a été
         testé et approuvé pour cet usage.</para>
     </usage>

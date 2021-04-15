@@ -13,11 +13,11 @@
     </suiviModif>
     <aspect couleur="noir" forme="triangle">
         <style époque="contemporain">
-            <para>Ce miroir triangulaire de marque "Tikamoon" et de modèle "Maho"
-                est rehaussé de quatre barres superposées, ouvragées. Celles-ci épousent l'angle supérieur du triangle.</para>
+            <para>ce miroir triangulaire de marque « Tikamoon » et de modèle « Maho »
+                est rehaussé de quatre barres superposées, ouvragées. Celles-ci épousent l’angle supérieur du triangle.</para>
         </style>
         <cadre>
-            <para>Le cadre, en métal peint, apporte une touche industrielle et graphique à la pièce où il est exposé.</para>
+            <para>le cadre, en métal peint, apporte une touche industrielle et graphique à la pièce où il est exposé.</para>
         </cadre>
     </aspect>
     <mesures>
@@ -29,15 +29,15 @@
     <origine dateAcquisition="2018-02-01" moyenAcquisition="achat" prixAchatEuros="149">
         <commentaire>
             <para>Ce miroir triangulaire, comme le <lienInterne ID="miroir38">miroir
-                    38</lienInterne>, a été conçu par l'entreprise Tikamoon, située dans le nord de
-                la France, à Lille. Celle-ci s'inscrit dans un créneau de meubles durables. Elle a
-                développé une chaîne de production à l'impact environnemental limité. La fiche produit du miroir est consultable sous ce 
+                    38</lienInterne>, a été conçu par l’entreprise Tikamoon, située dans le nord de
+                la France, à Lille. Celle-ci s’inscrit dans un créneau de meubles durables. Elle a
+                développé une chaîne de production à l’impact environnemental limité. La fiche produit du miroir est consultable sous ce 
                     <lienExterne
                         URL="https://www.tikamoon.com/art-miroir-triangulaire-en-m-tal-60-maho-2782.htm"
                     >lien</lienExterne>.</para>
         </commentaire>
     </origine>
-    <valeur>En mai 2020, le prix du miroir était de 149 euros.</valeur>
+    <valeur>En mai 2020, le prix du miroir était de 149 €.</valeur>
     <usage>
         <para>Ce miroir peut agrémenté toutes les pièces de la maison.</para>
     </usage>

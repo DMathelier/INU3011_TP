@@ -1,8 +1,31 @@
 h1 {
 	text-align: center;
-	color: red;
+	color: grey;
 }
 
-h2 {
-	text-align: center;
+#identification {
+	text-align:center; 
+	margin-right:1em; 
+	padding:1em;
+}
+
+img {
+	float:right;
+	height:75%; 
+	width: auto;"
+}
+
+li {
+	/*font-size: small;*/
+	color: grey;
+
+}
+
+a {
+	color: grey;
+}
+
+.bold
+{
+	font-weight: bold;
 }

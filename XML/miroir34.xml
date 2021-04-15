@@ -10,12 +10,12 @@
     </suiviModif>
     <aspect couleur="transparent" forme="rond">
         <style époque="contemporain">
-            <para>Ce miroir rond dit "Forest" a été conçu par la designer Sophie
+            <para>ce miroir rond dit « Forest » a été conçu par la designer Sophie
             Larger. Il est à poser par le détenteur sur une base où se dressent des barres
             verticales en métal, avec finition en doré.</para>
         </style>
         <cadre>
-            <para>Ces barres consituent un cadre décalé, dont le miroir semble glisser.</para>
+            <para>ces barres consituent un cadre décalé, dont le miroir semble glisser.</para>
         </cadre>
     </aspect>
     <mesures>
@@ -26,13 +26,13 @@
     <origine dateAcquisition="2018-09-19" moyenAcquisition="achat" prixAchatEuros="825">
         <commentaire>
             <para>Ce miroir circulaire, comme le <lienInterne ID="miroir50">miroir 50</lienInterne>,
-                a été acheté chez Roche Bobois, l'un des leaders mondiaux du mobilier design haut de
+                a été acheté chez Roche Bobois, l’un des leaders mondiaux du mobilier design haut de
                 gamme. La fiche de ce produit est consultable sous ce <lienExterne
                     URL="https://www.roche-bobois.com/fr-CA/produit/forest-miroir"
                     >lien</lienExterne>.</para>
         </commentaire>
     </origine>
-    <valeur>En mai 2020, le prix du miroir était de 1230 dollars (825 euros).</valeur>
+    <valeur>En mai 2020, le prix du miroir était de 1230 $CAN (825 €).</valeur>
     <usage>
         <para>Ce miroir est voué à être fixé sur une commode, un buffet, un secrétaire.</para>
     </usage>

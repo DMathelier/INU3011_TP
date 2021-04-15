@@ -20,7 +20,7 @@ curseur survole un nom d’élément ou d’attribut.
 <!ATTLIST miroir ID NMTOKEN #REQUIRED>
 
 <!-- doc: Éventuelle photo du miroir (accessible via un lien vers le dossier "photos"), au format JPEG et dont l'intitulé est similaire à l'identifiant du miroir (ex. "miroir1.jpg"). -->
-<!ATTLIST miroir photo NMTOKEN #FIXED "oui">
+<!ATTLIST miroir photo (oui) #IMPLIED>
 
 <!-- doc: Suivi des modifications apportées à la présente fiche -->
 <!ELEMENT suiviModif (création, modification?)>
@@ -127,12 +127,17 @@ curseur survole un nom d’élément ou d’attribut.
 <!-- doc: Bloc de paragraphe pouvant contenir des sous-éléments en emphase et des liens (internes ou externes). Exemples:
   Un miroir très <em>british</em> !
   Dans le même style, voir également <lien ID="miroir22">ce miroir</lien>. -->
-<!ELEMENT para (#PCDATA | em | lienInterne | lienExterne)*>
+<!ELEMENT para (#PCDATA | em | sup | lienInterne | lienExterne)*>
 
 <!-- doc: Passage en emphase. Exemples:
   style <em>british</em> et romantique
   miroir <em>so chic</em> -->
 <!ELEMENT em (#PCDATA)>
+
+<!-- doc: Passage en exposant. Exemples:
+  XX<sup>e</sup> siècle
+  sa 1<sup>re</sup> utilisation -->
+<!ELEMENT sup (#PCDATA)>
 
 <!-- doc: Lien pour renvoyer à un autre miroir de la collection dans un paragraphe de texte via son identifiant (attribut ID) Exemples:
   numéro 1
