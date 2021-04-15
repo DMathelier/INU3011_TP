@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
   <!-- L’instruction <xsl:output /> qui suit précise la forme de l’extrant désiré :
     - HTML5
     - indenté
@@ -14,6 +15,7 @@
     <html>
       <head>
         <title><xsl:value-of select="@ID"/></title>
+        <link rel="stylesheet" href="../fichiers-aux-HTML/style.css" type="text/css"/> 
       </head>
       <body>
         <h1>Catalogue de miroirs de la collection privée de Narcisse Brillant</h1>
@@ -137,7 +139,7 @@
   </xsl:template>
   
   <xsl:template match="commentaire">
-    <p><strong>Commentaire : </strong> <xsl:value-of select="."/></p>
+    <p><strong>Commentaire : </strong> <xsl:apply-templates select="*"/></p>
   </xsl:template>
   
   <xsl:template match="valeur">
@@ -163,12 +165,16 @@
   </xsl:template>
   
   <xsl:template match="lienInterne"> <!-- + paramétrage @ID -->
-    <a href="{@ID}.xml"><xsl:value-of select="."/></a>
+    <a href="{@ID}.xml">
+      <xsl:value-of select="."/>
+    </a>
   </xsl:template>
   
   <xsl:template match="lienExterne"> <!-- + paramétrage @URL 
   <xsl:value-of select="@URL"/>-->
-    <a href="{@URL}"><xsl:value-of select="."/></a>
+    <a href="{@URL}">
+      <xsl:value-of select="."/>
+    </a>
   </xsl:template>
   
 </xsl:stylesheet>

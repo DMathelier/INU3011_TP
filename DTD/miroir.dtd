@@ -20,7 +20,7 @@ curseur survole un nom d’élément ou d’attribut.
 <!ATTLIST miroir ID NMTOKEN #REQUIRED>
 
 <!-- doc: Éventuelle photo du miroir (accessible via un lien vers le dossier "photos"), au format JPEG et dont l'intitulé est similaire à l'identifiant du miroir (ex. "miroir1.jpg"). -->
-<!ATTLIST miroir photo (oui) #FIXED "oui">
+<!ATTLIST miroir photo NMTOKEN #FIXED "oui">
 
 <!-- doc: Suivi des modifications apportées à la présente fiche -->
 <!ELEMENT suiviModif (création, modification?)>
@@ -135,21 +135,21 @@ curseur survole un nom d’élément ou d’attribut.
 <!ELEMENT em (#PCDATA)>
 
 <!-- doc: Lien pour renvoyer à un autre miroir de la collection dans un paragraphe de texte via son identifiant (attribut ID) Exemples:
-  dans un style totalement opposé au <lienInterne ID="miroir1">numéro 1</lienInterne de la collection
-  dans le même style, voir <lienInterne ID="miroir22">ce miroir</lienInterne -->
+  numéro 1
+  ce miroir -->
 <!ELEMENT lienInterne (#PCDATA)>
 
-<!-- doc: Identifiant du miroir auquel le lien renvoie. Exemples:
+<!-- doc: Identifiant (ID) du miroir auquel le lien renvoie. Exemples:
   miroir1
   miroir22 -->
 <!ATTLIST lienInterne ID NMTOKEN #REQUIRED>
 
 <!-- doc: Lien pour renvoyer à une ressource externe via une URL Exemples:
-  voir les autres miroirs proposés par <lienExterne URL="http://www.bouclair.com/fr/decor-mural/miroirs/">Bouclair</lienExterne>
-  ce miroir a été acheté sur <lienExterne URL="http://www.proantic.com/miroir.php">Proantic.com</lienExterne>, réseau d'antiquaires professionnels  -->
+  Bouclair
+  Proantic.com -->
 <!ELEMENT lienExterne (#PCDATA)>
 
-<!-- doc: Ressource externe à laquelle le lien renvoie. Exemples:
+<!-- doc: Ressource externe (URL) à laquelle le lien renvoie. Exemples:
   http://www.bouclair.com/fr/decor-mural/miroirs/
   http://www.proantic.com/miroir.php -->
 <!ATTLIST lienExterne URL CDATA #REQUIRED>

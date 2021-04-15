@@ -37,10 +37,8 @@
             <attribut>
                 <nom>photo</nom>
                 <descriptionPourInfobulle>Éventuelle photo du miroir (accessible via un lien vers le dossier "photos"), au format JPEG et dont l'intitulé est similaire à l'identifiant du miroir (ex. "miroir1.jpg").</descriptionPourInfobulle>
-                <énuméré>
-                    <valeurPossible>oui</valeurPossible>
-                </énuméré>
-                <FIXED/>
+                <NMTOKEN/>
+                <FIXED>oui</FIXED>
             </attribut>
             </attributs>
         </élément>
@@ -312,13 +310,13 @@
             <descriptionPourInfobulle>Lien pour renvoyer à un autre miroir de la collection dans un paragraphe de texte via son identifiant (attribut ID)</descriptionPourInfobulle>
             <modèleContenuXML>(#PCDATA)</modèleContenuXML>
             <exemplesContenuAttendu>
-                <exemple>dans un style totalement opposé au &lt;lienInterne ID="miroir1">numéro 1&lt;/lienInterne de la collection</exemple>
-                <exemple>dans le même style, voir &lt;lienInterne ID="miroir22">ce miroir&lt;/lienInterne</exemple>
+                <exemple>numéro 1</exemple>
+                <exemple>ce miroir</exemple>
             </exemplesContenuAttendu>
             <attributs>
                 <attribut>
                     <nom>ID</nom>
-                    <descriptionPourInfobulle>Identifiant du miroir auquel le lien renvoie.</descriptionPourInfobulle>
+                    <descriptionPourInfobulle>Identifiant (ID) du miroir auquel le lien renvoie.</descriptionPourInfobulle>
                     <NMTOKEN/>
                     <REQUIRED/>
                     <exemplesValeurAttendue>
@@ -333,13 +331,13 @@
             <descriptionPourInfobulle>Lien pour renvoyer à une ressource externe via une URL</descriptionPourInfobulle>
             <modèleContenuXML>(#PCDATA)</modèleContenuXML>
             <exemplesContenuAttendu>
-                <exemple>voir les autres miroirs proposés par &lt;lienExterne URL="http://www.bouclair.com/fr/decor-mural/miroirs/">Bouclair&lt;/lienExterne></exemple>
-                <exemple>ce miroir a été acheté sur &lt;lienExterne URL="http://www.proantic.com/miroir.php">Proantic.com&lt;/lienExterne>, réseau d'antiquaires professionnels </exemple>
+                <exemple>Bouclair</exemple>
+                <exemple>Proantic.com</exemple>
             </exemplesContenuAttendu>
             <attributs>
                 <attribut>
                     <nom>URL</nom>
-                    <descriptionPourInfobulle>Ressource externe à laquelle le lien renvoie.</descriptionPourInfobulle>
+                    <descriptionPourInfobulle>Ressource externe (URL) à laquelle le lien renvoie.</descriptionPourInfobulle>
                     <CDATA/>
                     <REQUIRED/>
                     <exemplesValeurAttendue>
