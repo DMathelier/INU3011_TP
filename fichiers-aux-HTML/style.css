@@ -1,5 +1,7 @@
 body {
 	margin: 30px;
+	font-family: 'Lato', sans-serif;
+	line-height: 1.5;
 }
 
 h1 {
@@ -9,18 +11,22 @@ h1 {
 
 h2 {
 	margin-top: 30px;
+	margin-bottom: -5px;
+}
+
+h3 {
+	margin-top : 25px;
+	margin-bottom: -5px;
 }
 
 #identification {
 	text-align:center; 
-	margin-right:1em; 
 	padding:1em;
 }
 
 img {
 	float:right;
-	height:75%; 
-	width: auto;"
+	margin-right: 10px;
 }
 
 li {
