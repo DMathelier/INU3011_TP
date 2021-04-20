@@ -84,18 +84,19 @@
     <xsl:choose>
       <xsl:when test="@époque">
         <p> <span class="bold">Époque : </span> <xsl:value-of select="@époque"/></p>
-        <xsl:apply-templates select="*"/>
       </xsl:when>
       <xsl:otherwise/>
     </xsl:choose>
   </xsl:template>
 
   <xsl:template match="cadre">
-    <p> <span class="bold">Cadre :</span> <xsl:value-of select="."/></p>
-    <xsl:apply-templates select="*"/>
+    <p><span class="bold">Cadre :</span> <xsl:value-of select="."/></p>
+    <!-- </xsl:value-of><xsl:apply-templates select="*"/>  accepte l'ital/les exposants mais ajoute un p 
+    laisser comme ça pour l'instant (donc sans ital et exposant), on verra à la fin 
+    (une solution pourrait être de ne pas mettre cadre et style en para mais il faudra corriger la DTD) -->
   </xsl:template>
   
-  <xsl:template match="mesures"> <!-- OK sauf le style de mesure : en plus grand ? ou en liste ? -->
+  <xsl:template match="mesures">
     <div>
       <h2>Mesures</h2>
       <xsl:apply-templates select="hauteur"/>
@@ -105,17 +106,17 @@
     </div>
   </xsl:template>
   
-  <xsl:template match="hauteur"> <!-- OK -->
+  <xsl:template match="hauteur">
     <p> <span class="bold">Hauteur : </span>
       <xsl:value-of select="."/> cm
     </p> </xsl:template>
   
-  <xsl:template match="largeur"> <!-- OK -->
+  <xsl:template match="largeur">
     <p> <span class="bold">Largeur : </span>
       <xsl:value-of select="."/> cm
     </p></xsl:template>
   
-  <xsl:template match="profondeur"> <!-- OK -->
+  <xsl:template match="profondeur"> 
     <p> <span class="bold">Profondeur : </span>
       <xsl:value-of select="."/> cm
     </p></xsl:template>
@@ -161,16 +162,16 @@
     </div>
   </xsl:template>
   
-  <xsl:template match="para"> <!-- OK -->
+  <xsl:template match="para">
     <p><xsl:apply-templates /></p>
   </xsl:template>
   
   <xsl:template match="em">
-    <em><xsl:apply-templates /></em> <!-- OK -->
+    <em><xsl:apply-templates /></em>
   </xsl:template>
   
   <xsl:template match="sup">
-    <sup><xsl:apply-templates /></sup> <!-- OK -->
+    <sup><xsl:apply-templates /></sup>
   </xsl:template>
   
   <xsl:template match="lienInterne"> <!-- + paramétrage @ID -->

@@ -14,11 +14,11 @@
     <aspect couleur="or" forme="rond">
         <style époque="contemporain">
             <para>ce miroir est composé d’une structure à double cercles en métal
-            doré, d’un verre miroir à biseaux et comporte un dessin d’étoile.
-            </para>
+                doré, d’un verre miroir à biseaux et comporte un dessin d’étoile.</para>
         </style>
         <cadre>
-            <para>le miroir est entouré d’un cadre doré très fin.</para></cadre>
+            <para>le miroir est entouré d’un cadre doré très <em>fin</em>.</para>
+        </cadre>
     </aspect>
     <mesures>
         <hauteur>120</hauteur>
