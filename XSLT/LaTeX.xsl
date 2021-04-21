@@ -60,7 +60,7 @@
   
   <xsl:template match="création"> <!-- + paramétrage @date -->
     \item {\bf \large Date de création de la fiche :} <xsl:value-of select="@date"/> ; 
-    {\bf \large créateur :} <xsl:value-of select="créateur"/>
+    {\bf \large créateur :} <xsl:value-of select="contributeur"/>
   </xsl:template>
   
   <xsl:template match="modification"> <!-- + paramétrage @date -->
@@ -84,7 +84,6 @@
     <xsl:choose>
       <xsl:when test="@époque">
         \\ {\bf \large Époque :} <xsl:value-of select="@époque"/>
-        <xsl:apply-templates select="*"/>
       </xsl:when>
       <xsl:otherwise/>
     </xsl:choose>
@@ -92,7 +91,6 @@
   
   <xsl:template match="cadre">
       \\ {\bf \large Cadre :} <xsl:value-of select="."/>
-    <xsl:apply-templates select="*"/>
   </xsl:template>
   
   <xsl:template match="mesures"> <!-- OK sauf le style de mesure : en plus grand ? ou en liste ? -->
