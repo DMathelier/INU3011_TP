@@ -5,28 +5,27 @@
     - format texte
     - encodé en UTF-8
     - sans déclaration XML -->
-  <xsl:output method="text" indent="no" encoding="UTF-8" omit-xml-declaration="yes" />
+  <xsl:output
+    method="text"
+    indent="no" 
+    encoding="UTF-8" 
+    omit-xml-declaration="yes" />
 
-  <xsl:template match="/"> <!-- OK -->
-    \input{../travail/preamb3011}
+  <xsl:template match="/">\input{../travail/preamb3011}
     <xsl:apply-templates />
-    \end{document}
+\end{document}
   </xsl:template>
 
-  <!-- OK -->
+  <!-- Le gabarit suivant évite souvent bien des problèmes, à n'enlever que sur recommandation du
+    professeur. -->
   <xsl:template match="text()[normalize-space(.) = '']" />
 
-  <!-- NOS GABARITS -->
-  <!-- à mon avis on devrait rédiger une fiche type en LaTeX pour voir le résultat attendu -->
-  <!-- s'inspirer de la fiche de transformation du dossier Vin ou de ses fiches -->
-  <!-- supprimer peut-être pour l'instant les enrichissements type bold ou taille de police -->
-  <!-- car ça peut être source d'erreurs et il vaudrait mieux les rajouter à la fin quand tout le reste fonctionnera -->
-  
+  <!-- Vous placez vos autres gabarits ici, en commençant par celui qui "match" votre
+  élément de plus haut niveau. -->
   
   <xsl:template match="miroir">
-    <xsl:apply-templates select="*"/>
     } \title{
-    <xsl:value-of select="@ID"/>  <!-- répétion – à mon avis celui-ci est de trop mais à vérifier -->
+    <xsl:value-of select="@ID"/>
     } \maketitle \begin{center}
   </xsl:template>
    
@@ -37,7 +36,8 @@
   
   <xsl:template match="identification">
      \section* {Code d’identification :}
-    <xsl:value-of select="@ID"/> <!-- NOS GABARITS -->
+     <xsl:value-of select="@ID"/><!-- titre du miroir = son identifiant 
+            mais du coup c'est pas très joli comme titre de fiche... -->
   </xsl:template>
   
   <xsl:template match="photo">
@@ -58,12 +58,12 @@
     \end {itemize}
   </xsl:template>
   
-  <xsl:template match="création">
+  <xsl:template match="création"> <!-- + paramétrage @date -->
     \item {\bf \large Date de création de la fiche :} <xsl:value-of select="@date"/> ; 
     {\bf \large créateur :} <xsl:value-of select="contributeur"/>
   </xsl:template>
   
-  <xsl:template match="modification">
+  <xsl:template match="modification"> <!-- + paramétrage @date -->
     \item {\bf \large Date de modification de la fiche :} <xsl:value-of select="@date"/> ; 
     {\bf \large contributeur :} <xsl:value-of select="contributeur"/>
   </xsl:template>
@@ -71,7 +71,7 @@
   <!--<xsl:template match="contributeur"> 
   </xsl:template>-->
   
-  <xsl:template match="aspect">
+  <xsl:template match="aspect"> <!-- + paramétrage @couleur et @forme -->
      \section* {Aspect}
      \\ {\bf \large Couleur :} <xsl:value-of select="@couleur"/>
      \\ {\bf \large Forme :}  <xsl:value-of select="@forme"/>
@@ -79,7 +79,7 @@
      <xsl:apply-templates select="cadre"/>
   </xsl:template>
   
-  <xsl:template match="style">
+  <xsl:template match="style"> <!-- + paramétrage @époque -->
       \\ {\bf \large Style :} <xsl:value-of select="."/>
     <xsl:choose>
       <xsl:when test="@époque">
@@ -93,7 +93,7 @@
       \\ {\bf \large Cadre :} <xsl:value-of select="."/>
   </xsl:template>
   
-  <xsl:template match="mesures">
+  <xsl:template match="mesures"> <!-- OK sauf le style de mesure : en plus grand ? ou en liste ? -->
     \section* {Mesures}
       <xsl:apply-templates select="hauteur"/>
       <xsl:apply-templates select="largeur"/>
@@ -101,17 +101,17 @@
       <xsl:apply-templates select="poids"/>
   </xsl:template>
   
-  <xsl:template match="hauteur">
+  <xsl:template match="hauteur"> <!-- OK -->
     \\ {\bf \large Hauteur :}
       <xsl:value-of select="."/> cm
    </xsl:template>
   
-  <xsl:template match="largeur">
+  <xsl:template match="largeur"> <!-- OK -->
     \\ {\bf \large Largeur :}
       <xsl:value-of select="."/> cm
     </xsl:template>
   
-  <xsl:template match="profondeur">
+  <xsl:template match="profondeur"> <!-- OK -->
     \\ {\bf \large Profondeur :}
       <xsl:value-of select="."/> cm
     </xsl:template>
@@ -121,7 +121,7 @@
       <xsl:value-of select="."/> kg
     </xsl:template>
   
-  <xsl:template match="origine"> 
+  <xsl:template match="origine"> <!-- + paramétrage @dateAcquisition, @moyenAcquisition et @prixAchatEuros -->
     \section* {Origine}
     \\ {\bf \large Date d’acquisition :} <xsl:value-of select="@dateAcquisition"/>
     \\ {\bf \large Moyen d’acquisition :} <xsl:value-of select="@moyenAcquisition"/>
@@ -150,25 +150,35 @@
   </xsl:template>
   
   <xsl:template match="para"> <!-- OK -->
-    <xsl:text> 
-    
-</xsl:text> <!-- OK -->
+    <xsl:text> </xsl:text>
     <xsl:apply-templates/>
-    <xsl:text> 
-    
-</xsl:text> <!-- OK -->
+    <xsl:text> </xsl:text>
   </xsl:template>
   
-  <xsl:template match="em"> <!-- OK -->
-      {\em <xsl:apply-templates/> } </xsl:template>
+  <xsl:template match="em">
+      {\em
+      <xsl:apply-templates/>
+      }
+     <!-- OK -->
+  </xsl:template>
   
-  <xsl:template match="sup"> <!-- OK -->
-      {\up <xsl:apply-templates /> } </xsl:template>
+  <xsl:template match="sup">
+      {\up
+      <xsl:apply-templates />
+      }
+    <!-- OK -->
+  </xsl:template>
   
   <xsl:template match="lienInterne">
-      {\em <xsl:value-of select="."/> } </xsl:template>
+      {\em
+      <xsl:value-of select="."/>
+      }
+   </xsl:template>
   
   <xsl:template match="lienExterne"> 
-      {\em <xsl:value-of select="."/> } </xsl:template>
+      {\em
+      <xsl:value-of select="."/>
+      }
+  </xsl:template>
   
 </xsl:stylesheet>

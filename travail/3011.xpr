@@ -18,7 +18,7 @@
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>xml-stylesheet processing instruction</String>
+                                        <String>LaTeX</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
