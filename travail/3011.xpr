@@ -14,6 +14,26 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>../XML/miroir50.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>xml-stylesheet processing instruction</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>../XML/miroir5.xml</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -215,26 +235,6 @@
                             <scenarioAssociation>
                                 <field name="url">
                                     <String>../XML/miroir45.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>xml-stylesheet processing instruction</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>../XML/miroir50.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
