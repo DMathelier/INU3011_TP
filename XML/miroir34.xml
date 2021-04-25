@@ -10,13 +10,11 @@
     </suiviModif>
     <aspect couleur="transparent" forme="rond">
         <style époque="contemporain">
-            <para>ce miroir rond dit « Forest » a été conçu par la designer Sophie
+            ce miroir rond dit « Forest » a été conçu par la designer Sophie
             Larger. Il est à poser par le détenteur sur une base où se dressent des barres
-            verticales en métal, avec finition en doré.</para>
+            verticales en métal, avec finition en doré.
         </style>
-        <cadre>
-            <para>ces barres consituent un cadre décalé, dont le miroir semble glisser.</para>
-        </cadre>
+        <cadre>ces barres consituent un cadre décalé, dont le miroir semble glisser.</cadre>
     </aspect>
     <mesures>
         <hauteur>60</hauteur>

@@ -9,11 +9,10 @@
         </création>
     </suiviModif>
     <aspect couleur="or" forme="octogone">
-        <style époque="vintage">
-            <para>ce miroir dit « Makita », de la marque AMPM, est décoré de deux carrés en laiton superposés.</para>
+        <style époque="contemporain">
+            ce miroir dit « Makita », de la marque AMPM, est décoré de deux carrés en laiton superposés.
         </style>
-        <cadre>
-            <para>le cadre en métal a fait l’objet d'une finition en laiton vieilli.</para></cadre>
+        <cadre>le cadre en métal a fait l’objet d'une finition en laiton vieilli.</cadre>
     </aspect>
     <mesures>
         <hauteur>70</hauteur>

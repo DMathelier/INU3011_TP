@@ -12,15 +12,11 @@
         </modification>
     </suiviModif>
     <aspect couleur="blanc" forme="rectangle">
-        <style époque="XIXe siècle">
-            <para>ce miroir rectangulaire comporte un trumeau imitant les
-            pratiques de décoration qui ont eu cours à partir du règne de Louis XVI et se sont
-            poursuivies au XIX<sup>e</sup> siècle. La pièce imitant le bois sculpté est soulignée d'une
-            ornementation florale en cuivre.</para>
+        <style époque="XIXᵉ siècle">ce miroir rectangulaire comporte un trumeau imitant les
+            pratiques de décoration qui ont eu cours à partir du règne de Louis XVI et se sont poursuivies au XIX<sup>e</sup> siècle. La pièce imitant le bois sculpté est soulignée d'une
+            ornementation florale en cuivre.
         </style>
-        <cadre>
-            <para>le miroir est entouré d'un cadre en résine fabriqué à la commande dans un atelier
-                d’artisan en France.</para>
+        <cadre>le miroir est entouré d'un cadre en résine fabriqué à la commande dans un atelier d’artisan en France.
         </cadre>
     </aspect>
     <mesures>
@@ -32,10 +28,10 @@
             <para>Ce miroir a été acquis initialement par le collectionneur dans un magasin de la
                 chaîne française <lienExterne URL="http://www.maisonsdumonde.com/">Maisons du
                     monde</lienExterne>. La description du miroir est consultable <lienExterne
-                    URL="http://www.maisonsdumonde.com/FR/fr/p/miroir-trumeau-en-resine-ivoire-70x150-M21017760.htm"
-                    >sous ce lien</lienExterne>.</para>
+                        URL="http://www.maisonsdumonde.com/FR/fr/p/miroir-trumeau-en-resine-ivoire-70x150-M21017760.htm"
+                        >sous ce lien</lienExterne>.</para>
             <para>En ceci qu'il est rectangulaire et orné, il ressemble au <lienInterne
-                    ID="miroir29">miroir 29</lienInterne> de la collection.</para>
+                ID="miroir29">miroir 29</lienInterne> de la collection.</para>
         </commentaire>
     </origine>
     <valeur>En février 2021, le prix du miroir était estimé à 715 €.</valeur>

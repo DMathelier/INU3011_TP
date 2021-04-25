@@ -13,12 +13,10 @@
     </suiviModif>
     <aspect couleur="noir" forme="triangle">
         <style époque="contemporain">
-            <para>ce miroir triangulaire de marque « Tikamoon » et de modèle « Maho »
-                est rehaussé de quatre barres superposées, ouvragées. Celles-ci épousent l’angle supérieur du triangle.</para>
+            ce miroir triangulaire de marque « Tikamoon » et de modèle « Maho »
+                est rehaussé de quatre barres superposées, ouvragées. Celles-ci épousent l’angle supérieur du triangle.
         </style>
-        <cadre>
-            <para>le cadre, en métal peint, apporte une touche industrielle et graphique à la pièce où il est exposé.</para>
-        </cadre>
+        <cadre>le cadre, en métal peint, apporte une touche industrielle et graphique à la pièce où il est exposé.</cadre>
     </aspect>
     <mesures>
         <hauteur>60</hauteur>
@@ -31,9 +29,8 @@
             <para>Ce miroir triangulaire, comme le <lienInterne ID="miroir38">miroir
                     38</lienInterne>, a été conçu par l’entreprise Tikamoon, située dans le nord de
                 la France, à Lille. Celle-ci s’inscrit dans un créneau de meubles durables. Elle a
-                développé une chaîne de production à l’impact environnemental limité. La fiche produit du miroir est consultable sous ce 
-                    <lienExterne
-                        URL="https://www.tikamoon.com/art-miroir-triangulaire-en-m-tal-60-maho-2782.htm"
+                développé une chaîne de production à l’impact environnemental limité.</para>
+            <para>La fiche produit du miroir est consultable sous ce <lienExterne URL="https://www.tikamoon.com/art-miroir-triangulaire-en-m-tal-60-maho-2782.htm"
                     >lien</lienExterne>.</para>
         </commentaire>
     </origine>

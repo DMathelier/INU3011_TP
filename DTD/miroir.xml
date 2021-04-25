@@ -36,11 +36,12 @@
                 </attribut>
                 <attribut>
                     <nom>photo</nom>
-                    <descriptionPourInfobulle>Éventuelle photo du miroir (accessible via un lien vers le dossier "photos"), au format JPEG et dont l'intitulé est similaire à l'identifiant du miroir (ex. "miroir1.jpg").</descriptionPourInfobulle>
+                    <descriptionPourInfobulle>Attribut à n'utiliser que si une photo est associée à la fiche (indiquer "oui"). S'il n'y a pas de photo associée, ne pas utiliser cet attribut.</descriptionPourInfobulle>
                     <énuméré>
                         <valeurPossible>oui</valeurPossible>
                     </énuméré>
                     <IMPLIED/>
+                    <commentairesDeModélisation>L'éventuelle photo du miroir est accessible via un lien vers le dossier "photos", au format JPEG et son intitulé est similaire à l'identifiant du miroir (ex. "miroir1.jpg").</commentairesDeModélisation>
                 </attribut>
             </attributs>
         </élément>
@@ -145,7 +146,7 @@
         <élément>
             <idGen>style</idGen>
             <descriptionPourInfobulle>Style du miroir</descriptionPourInfobulle>
-            <modèleContenuXML>(para+)</modèleContenuXML>
+            <modèleContenuXML>(#PCDATA | em | sup)*</modèleContenuXML>
             <exemplesContenuAttendu>
                 <exemple>Industriel</exemple>
                 <exemple>Joli miroir &lt;em>vintage&lt;/em></exemple>
@@ -159,7 +160,7 @@
                     <REQUIRED/>
                     <exemplesValeurAttendue>
                         <exemple>Contemporain</exemple>
-                        <exemple>XVIIIe siècle</exemple>
+                        <exemple>XVIIIᵉ siècle</exemple>
                     </exemplesValeurAttendue>
                     <commentairesDeModélisation>Préciser au minimum l'époque du miroir</commentairesDeModélisation>
                 </attribut>
@@ -168,7 +169,7 @@
         <élément>
             <idGen>cadre</idGen>
             <descriptionPourInfobulle>Description du cadre</descriptionPourInfobulle>
-            <modèleContenuXML>(para)</modèleContenuXML>
+            <modèleContenuXML>(#PCDATA | em | sup)*</modèleContenuXML>
             <exemplesContenuAttendu>
                 <exemple>Cadre en métal d'une épaisseur de 5 cm</exemple>
                 <exemple>Discret cadre en faux bois</exemple>

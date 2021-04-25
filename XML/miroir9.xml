@@ -12,12 +12,9 @@
         </modification>
     </suiviModif>
     <aspect couleur="transparent" forme="rond">
-        <style époque="vintage">
-            <para>ce miroir circulaire est agrémenté de trois rangées de perles de verre scintillantes.</para>
-        </style>
-        <cadre>
-            <para>des bijoux ornent le pourtour.</para>
-        </cadre>
+        <style époque="contemporain">ce miroir <em>vintage</em> circulaire est agrémenté de trois
+            rangées de perles de verre scintillantes. </style>
+        <cadre>des bijoux ornent le pourtour.</cadre>
     </aspect>
     <mesures>
         <hauteur>30</hauteur>
@@ -27,14 +24,15 @@
     </mesures>
     <origine dateAcquisition="2017-02-13" moyenAcquisition="don">
         <commentaire>
-            <para>Ce miroir vintage, comme le <lienInterne ID="miroir17">miroir
-                17</lienInterne>, a été conçu par The Tangerine Mirror Company. Voir sa fiche produit chez <lienExterne
+            <para>Ce miroir vintage, comme le <lienInterne ID="miroir17">miroir 17</lienInterne>, a
+                été conçu par The Tangerine Mirror Company. Voir sa fiche produit chez <lienExterne
                     URL="https://www.homedepot.ca/produit/the-tangerine-mirror-company-bijou-miroir-rond/1001384871"
                     >Home Depot</lienExterne>.</para>
         </commentaire>
     </origine>
     <valeur>En mai 2020, le prix du miroir était de 99 $CAN (66 €).</valeur>
     <usage>
-        <para>Mieux vaut fixer ce miroir dans une pièce très claire afin de rehausser l’éclat des perles de verre qui y sont serties.</para>
+        <para>Il vaut mieux fixer ce miroir dans une pièce très claire afin de rehausser
+            l’éclat des perles de verre qui y sont serties.</para>
     </usage>
 </miroir>

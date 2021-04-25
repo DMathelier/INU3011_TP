@@ -58,17 +58,17 @@ curseur survole un nom d’élément ou d’attribut.
 <!-- doc: Style du miroir Exemples:
   Industriel
   Joli miroir <em>vintage</em> -->
-<!ELEMENT style (para+)>
+<!ELEMENT style (#PCDATA | em | sup)*>
 
 <!-- doc: Époque du miroir Exemples:
   Contemporain
-  XVIIIe siècle -->
+  XVIIIᵉ siècle -->
 <!ATTLIST style époque CDATA #REQUIRED>
 
 <!-- doc: Description du cadre Exemples:
   Cadre en métal d'une épaisseur de 5 cm
   Discret cadre en faux bois -->
-<!ELEMENT cadre (para)>
+<!ELEMENT cadre (#PCDATA | em | sup)*>
 
 <!-- doc: Mesures du miroir -->
 <!ELEMENT mesures (hauteur, largeur, profondeur?, poids?)>

@@ -12,12 +12,10 @@
         </modification>
     </suiviModif>
     <aspect couleur="or" forme="rond">
-        <style époque="contemporain">
-            <para>ce miroir appelé « Capsule » se décompose en deux parties : un petit cercle
-            surmontant un plus grand. Ceux-ci sont unis par une fine tige ovoïde.</para>
+        <style époque="contemporain"> ce miroir appelé « Capsule » se décompose en deux parties : un petit cercle
+            surmontant un plus grand. Ceux-ci sont unis par une fine tige ovoïde.
         </style>
-        <cadre>
-            <para>le cadre est en métal doré.</para>
+        <cadre>le cadre est en métal doré.
         </cadre>
     </aspect>
     <mesures>
