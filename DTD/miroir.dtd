@@ -19,7 +19,7 @@ curseur survole un nom d’élément ou d’attribut.
   miroir22 -->
 <!ATTLIST miroir ID NMTOKEN #REQUIRED>
 
-<!-- doc: Éventuelle photo du miroir (accessible via un lien vers le dossier "photos"), au format JPEG et dont l'intitulé est similaire à l'identifiant du miroir (ex. "miroir1.jpg"). -->
+<!-- doc: Attribut à n'utiliser que si une photo est associée à la fiche (indiquer "oui"). S'il n'y a pas de photo associée, ne pas utiliser cet attribut. -->
 <!ATTLIST miroir photo (oui) #IMPLIED>
 
 <!-- doc: Suivi des modifications apportées à la présente fiche -->

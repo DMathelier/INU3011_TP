@@ -26,13 +26,13 @@ h3 {
 
 img {
 	float:right;
-	margin-right: 10px;
+	margin-left: 30px;
 }
 
 li {
-	/*font-size: small;*/
+	font-size: small;
 	color: grey;
-
+	margin-left: -20px;
 }
 
 a {

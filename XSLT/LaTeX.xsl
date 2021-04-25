@@ -14,25 +14,27 @@
       <xsl:when test="@photo">
         \image{../photos/<xsl:value-of select="/*/@ID"/>.jpg}
       </xsl:when>
-      <xsl:otherwise>Photo non disponible</xsl:otherwise>
+      <xsl:otherwise> \raggedleft{\em Photo non disponible}</xsl:otherwise>
     </xsl:choose> 
     \end{center} <xsl:apply-templates select="*"/>
   </xsl:template>
 
   <xsl:template match="suiviModif">
+    \begin{itemize}
     <xsl:apply-templates select="création"/>
     <xsl:apply-templates select="modification"/>
+    \end{itemize}
   </xsl:template>
 
   <xsl:template match="création">
-    {\bf \large Date de création de la fiche :} <xsl:value-of select="@date"/>
-    {par <xsl:value-of select="contributeur"/>} </xsl:template>
+    \footnotesize {\item {\bf Date de création de la fiche :} <xsl:value-of select="@date"/>
+    {par <xsl:value-of select="contributeur"/>}} </xsl:template>
 
   <xsl:template match="modification">
-    \\ {\bf \large Date de modification de la fiche :} <xsl:value-of select="@date"/>
-    {par <xsl:value-of select="contributeur"/>} \\</xsl:template>
+    \footnotesize {\item {\bf Date de modification de la fiche :} <xsl:value-of select="@date"/>
+    {par <xsl:value-of select="contributeur"/>} \\}</xsl:template>
 
-  <xsl:template match="aspect"> \\ \hr 
+  <xsl:template match="aspect"> \hr 
     \section* {Aspect} 
     {\bf \large Couleur :} <xsl:value-of select="@couleur"/>
     \\ \\ {\bf \large Forme :} <xsl:value-of select="@forme"/>
@@ -43,7 +45,7 @@
   <xsl:template match="style"> 
     \\ \\ {\bf \large Style :} <xsl:apply-templates/>
     <xsl:choose>
-      <xsl:when test="@époque">
+      <xsl:when test="@époque"> 
         {\bf \large Époque :} <xsl:value-of select="@époque"/>
       </xsl:when>
       <xsl:otherwise/>
@@ -62,24 +64,24 @@
     <xsl:apply-templates select="poids"/>
   </xsl:template>
 
-  <xsl:template match="hauteur"> {\bf \large Hauteur :} <xsl:value-of select="."/> cm \\ \\
+  <xsl:template match="hauteur"> {\bf \large Hauteur :} <xsl:value-of select="."/> cm
   </xsl:template> 
 
-  <xsl:template match="largeur"> {\bf \large Largeur :} <xsl:value-of select="."/> cm \\ \\
+  <xsl:template match="largeur"> \\ \\ {\bf \large Largeur :} <xsl:value-of select="."/> cm 
   </xsl:template>
 
-  <xsl:template match="profondeur"> {\bf \large Profondeur :} <xsl:value-of select="."/> cm \\ \\
+  <xsl:template match="profondeur"> \\ \\ {\bf \large Profondeur :} <xsl:value-of select="."/> cm  
   </xsl:template>
 
-  <xsl:template match="poids"> {\bf \large Poids :} <xsl:value-of select="."/> kg
+  <xsl:template match="poids"> \\ \\ {\bf \large Poids :} <xsl:value-of select="."/> kg
   </xsl:template>
 
   <xsl:template match="origine">
-    \section* {Origine} 
+    \section* {Origine}
     {\bf \large Date d’acquisition :} <xsl:value-of select="@dateAcquisition"/> \\ \\
-    {\bf \large Moyen d’acquisition :} <xsl:value-of select="@moyenAcquisition"/> \\ \\
+    {\bf \large Moyen d’acquisition :} <xsl:value-of select="@moyenAcquisition"/>
     <xsl:choose>
-      <xsl:when test="@prixAchatEuros"> {\bf \large Prix d’achat :}
+      <xsl:when test="@prixAchatEuros"> \\ \\ {\bf \large Prix d’achat :}
         <xsl:value-of select="@prixAchatEuros"/> € 
       </xsl:when>
       <xsl:otherwise/>
