@@ -157,7 +157,7 @@
   </xsl:template>
   
   <xsl:template match="lienInterne">
-    <a href="../XML/{@ID}.xml">
+    <a href="document.php?document=INU3011H21EQ11/{@ID}.xml">
       <xsl:value-of select="."/>
     </a>
   </xsl:template>
